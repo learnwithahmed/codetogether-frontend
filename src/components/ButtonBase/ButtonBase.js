@@ -4,8 +4,20 @@ import classnames from 'classnames'
 import styles from './ButtonBase.module.scss'
 
 const ButtonBase = props => {
-  const { children, className: classNameProp, component, disabled, innerRef, type, ...other } = props
-  const className = classnames(styles.root, { [styles.disabled]: disabled }, classNameProp)
+  const {
+    children,
+    className: classNameProp,
+    component,
+    disabled,
+    innerRef,
+    type,
+    ...other
+  } = props
+  const className = classnames(
+    styles.root,
+    { [styles.disabled]: disabled },
+    classNameProp,
+  )
 
   const buttonProps = {}
 
@@ -42,7 +54,11 @@ ButtonBase.propTypes = {
    * The component used for the root node.
    * Either a string to use a DOM element or a component.
    */
-  component: PropTypes.oneOfType([PropTypes.string, PropTypes.func, PropTypes.object]),
+  component: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.func,
+    PropTypes.object,
+  ]),
   /**
    * If `true`, the base button will be disabled.
    */
