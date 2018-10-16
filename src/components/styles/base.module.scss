@@ -1,0 +1,81 @@
+/* Main
+========================================================================== */
+@charset 'UTF-8';
+@import './colors.module';
+@import './all.module';
+
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  margin: 0;
+  background-color: $color--body-background;
+  overflow-x: hidden;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  color: $color--body;
+  font-family: $font-family--body;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+textarea {
+  resize: vertical;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+  font-weight: 700;
+  font-family: $font-family--display;
+  margin: 36px 0 12px;
+
+  span {
+    display: inline-block;
+  }
+}
+
+p {
+  margin: 0 0 24px;
+  padding: 0;
+
+  &.has-drop-cap:not(:focus):first-letter {
+    float: left;
+    font-size: 48px;
+    line-height: 42px;
+    margin: 6px 6px 0 0;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 700;
+  }
+}
