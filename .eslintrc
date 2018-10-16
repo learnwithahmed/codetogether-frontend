@@ -1,18 +1,12 @@
 {
   "extends": ["react-app", "prettier"],
   "rules": {
+    "prettier/prettier": "error",
+    "arrow-body-style": "off",
+    "func-style": "off",
     "import/order": ["error", { "newlines-between": "never" }],
     "no-invalid-this": "off",
     "prefer-destructuring": "off",
-    "prettier/prettier": [
-      "error",
-      {
-        "trailingComma": "es5",
-        "singleQuote": true,
-        "printWidth": 120,
-        "semi": false
-      }
-    ],
     "react/require-default-props": "off"
   },
   "plugins": ["prettier"]
