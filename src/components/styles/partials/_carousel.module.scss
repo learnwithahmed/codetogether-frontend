@@ -1,0 +1,153 @@
+/* Carousel
+   ========================================================================== */
+
+.carousel {
+  $namespace: &;
+  position: relative;
+  overflow: hidden;
+
+  &__frame {
+    transition: height 0.5s ease;
+    cursor: default !important;
+  }
+
+  &__item {
+    overflow: hidden;
+
+    &:not(:nth-child(1)) {
+      display: none;
+    }
+  }
+
+  &__image {
+    figure:before {
+      // overrite .poster
+      padding-top: percentage(480 / 700);
+    }
+  }
+
+  &__copy {
+    opacity: 0;
+    will-change: opacity, transform;
+
+    @at-root #{$namespace}--penny #{&} {
+      @media (min-width: $break-point--md) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding-top: 24px;
+      }
+    }
+  }
+
+  &__item--active &__copy {
+    animation: carousel-copy 0.75s 0.5s forwards;
+  }
+
+  &__dots {
+    color: $color--body;
+    height: 28px;
+    margin-left: 0;
+    margin-top: 4px;
+    transition: color 0.15s;
+    will-change: color;
+    overflow: hidden;
+
+    &--pull {
+      margin-left: 42px;
+      margin-top: -28px;
+    }
+
+    &--light {
+      color: $color--body-lighten;
+    }
+
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    &.in-view--in span {
+      transform: none;
+    }
+
+    span {
+      position: relative;
+      display: block;
+      width: 12px;
+      height: 20px;
+      margin: 4px;
+      float: left;
+      cursor: pointer;
+      transform: translateY(18px);
+
+      &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        transform: translate3d(-50%, -50%, 0);
+        border-radius: 8px;
+        opacity: 0.15;
+        border: 4px solid;
+        transition: opacity 0.4s ease-out;
+        will-change: opacity;
+      }
+
+      &:hover:after {
+        opacity: 0.3;
+      }
+
+      &.active:after {
+        opacity: 1;
+      }
+    }
+
+    &--right {
+      span {
+        float: right;
+        margin-right: 0;
+        margin-left: 8px;
+      }
+    }
+  }
+
+  &--on-first &__prev {
+    display: none;
+  }
+
+  &--on-last &__next {
+    display: none;
+  }
+
+  blockquote {
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: 0.005em;
+    margin-bottom: 42px;
+
+    p {
+      border-left: none;
+      padding-left: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@keyframes carousel-copy {
+  from {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,89 @@
+/* Forms
+   ========================================================================== */
+
+label {
+  color: $color--body;
+  display: inline-block;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+fieldset {
+  margin-bottom: 24px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+  color: $color--body-alt;
+  background-color: darken($color--tertiary, 3%);
+  border: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  display: block;
+  line-height: 24px;
+  padding: 12px 24px;
+  width: 100%;
+}
+
+.reveal input[type="email"] {
+  background-color: lighten($color--tertiary, 3%);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+  color: $color--body;
+}
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  border-radius: 0;
+  height: 48px;
+  width: 100%;
+  max-width: 100%;
+  padding: 12px 24px;
+  color: $color--body;
+  background-color: darken($color--tertiary, 3%);
+  // background-image: url("assets/images/more.svg");
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+// Overwright Mailchimp forms
+div.mce_inline_error {
+  font-size: 14px;
+  line-height: 24px;
+  color: inherit !important;
+  background-color: transparent !important;
+}

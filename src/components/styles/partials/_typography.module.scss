@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css?family=Karla:400,700,700i|Poppins:400,700");
+
+/* Typography
+   ========================================================================== */
+
+body,
+button,
+input,
+select,
+textarea {
+  color: $color--body;
+  font-family: $font-family--body;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+textarea {
+  resize: vertical;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+  font-weight: 700;
+  font-family: $font-family--display;
+  margin: 36px 0 12px;
+
+  span {
+    display: inline-block;
+  }
+}
+
+h1 {
+  font-size: 42px;
+  line-height: 48px;
+  letter-spacing: -0.02em;
+
+  @media (min-width: $break-point--lg) {
+    font-size: 56px;
+    line-height: 72px;
+  }
+}
+
+h2 {
+  font-size: 38px;
+  line-height: 48px;
+
+  @media (min-width: $break-point--lg) {
+    font-size: 45px;
+  }
+}
+
+h3 {
+  font-size: 34px;
+  line-height: 48px;
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 24px;
+  margin: 24px 0 16px;
+}
+
+h5 {
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+}
+
+h6 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+p {
+  margin: 0 0 24px;
+  padding: 0;
+
+  &.has-drop-cap:not(:focus):first-letter {
+    float: left;
+    font-size: 48px;
+    line-height: 42px;
+    margin: 6px 6px 0 0;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 700;
+  }
+}
+
+.big {
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.display-one {
+  clear: both;
+  font-weight: 700;
+  font-family: $font-family--display;
+  margin: 24px 0 12px;
+  font-size: 42px;
+  line-height: 48px;
+  letter-spacing: -0.02em;
+
+  @media (min-width: $break-point--lg) {
+    font-size: 112px;
+    line-height: 120px;
+    letter-spacing: -0.04em;
+  }
+}
+
+a {
+  color: $color--link;
+  text-decoration: none;
+  transition: color 0.4s 0.1s ease-out;
+}
+
+a:hover,
+a:focus {
+  color: $color--link-hover;
+  outline: 0;
+}
+
+.btn,
+.sub-head {
+  font-family: $font-family--body;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
+  a {
+    color: inherit;
+  }
+}
+
+.sub-head,
+a.sub-head {
+  color: $color--body;
+}
+
+a.sub-head:hover,
+a.sub-head:focus {
+  // color: $color--body-alt;
+}
+
+.text-body-2 {
+  font-weight: 700;
+}
+
+.text-body-3 {
+  font-size: 14px;
+  color: $color--body-alt;
+}
+
+.sub-head-2 {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: $color--body-alt;
+
+  a:not(:hover) {
+    color: inherit;
+  }
+}
+
+dfn,
+cite,
+em,
+i {
+  font-style: italic;
+}
+
+blockquote {
+  font-family: $font-family--body;
+  font-size: 19px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 24px 0;
+  color: $color--body;
+}
+
+blockquote p {
+  border-left: solid 0.25em $color--primary;
+  padding-left: 1.875em;
+}
+
+address {
+  margin: 0 0 1.5em;
+}
+
+pre {
+  color: $color--body;
+  background-color: $color--tertiary;
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: 15px;
+  font-size: 0.9375em;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em;
+  border-radius: 2px;
+}
+
+code,
+kbd,
+tt,
+var {
+  display: inline-block;
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: 13px;
+  line-height: inherit;
+  font-weight: normal;
+  max-width: 100%;
+  padding: 0 4px;
+  border-radius: 2px;
+
+  color: $color--code;
+  background-color: $color--code-background;
+}
+
+abbr,
+abbr[title],
+acronym,
+acronym[title] {
+  text-decoration: underline;
+  border-bottom: 0;
+  cursor: help;
+}
+
+mark,
+ins {
+  padding: 1px 4px;
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+mark {
+  color: $color--body-lighten;
+  background: $color--primary;
+}
+
+ins {
+  color: $color--body-lighten;
+  background: $color--secondary;
+}
+
+big {
+  font-size: 125%;
+}
+
+blockquote {
+  quotes: "" "";
+
+  &:before,
+  &:after {
+    content: "";
+  }
+}
+
+q {
+  quotes: "“" "”" "‘" "’";
+  padding: 1px 4px;
+  border-radius: 2px;
+  color: $color--body;
+  background: $color--tertiary;
+}
+
+*:focus {
+  outline: none;
+}
+
+hr {
+  display: block;
+  height: 0;
+  border: none;
+  border-top: 1px solid;
+  margin: 23px 0 24px;
+  opacity: 0.1;
+
+  &.b-dotted {
+    border-top-style: dotted;
+  }
+
+  &.b-dashed {
+    border-top-style: dashed;
+  }
+}

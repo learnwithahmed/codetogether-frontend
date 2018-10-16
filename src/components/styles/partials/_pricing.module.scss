@@ -1,0 +1,33 @@
+/* Pricing
+   ========================================================================== */
+
+.pricing {
+  &__item {
+    margin-bottom: 24px;
+    border: solid 1px $color--tertiary;
+    padding: 24px;
+
+    @media (min-width: $break-point--md) {
+      margin-right: -1px;
+    }
+
+    &__amount {
+      padding-top: 24px;
+      sup {
+        font-size: inherit;
+        top: -24px;
+      }
+
+      span {
+        font-size: 56px;
+        line-height: 72px;
+      }
+    }
+
+    &__features {
+      padding: 0;
+      margin: 0 0 24px;
+      list-style: none;
+    }
+  }
+}

@@ -1,0 +1,106 @@
+/* Paginations
+	 ========================================================================== */
+
+/* Comments */
+.comments-pagination {
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+/* Page */
+.pagination .prev,
+.pagination .next {
+  display: none;
+}
+
+/* Global */
+.nav-links {
+  font-weight: 700;
+}
+
+.nav-links > * {
+  display: inline-block;
+  position: relative;
+  min-width: 36px;
+  line-height: 36px;
+  height: 36px;
+  border-radius: 18px;
+  text-align: center;
+}
+
+.nav-links > *:not(:last-child) {
+  margin-right: 12px;
+}
+
+.nav-links .current {
+  background-color: $color--primary;
+  color: $color--body-lighten;
+  cursor: default;
+  box-shadow: 0 11px 22px rgba($color--body, 0.2);
+}
+
+.nav-links a:not(:hover) {
+  color: inherit;
+}
+
+.nav-links .page-numbers {
+  white-space: nowrap;
+}
+
+.nav-links .page-numbers__dash {
+  color: $color--body;
+}
+
+.nav-links .prev .page-numbers__dash {
+  margin-left: 24px;
+}
+
+.nav-links .next .page-numbers__dash {
+  margin-right: 24px;
+}
+
+/* Post pagination */
+.page-links {
+  margin-top: 68px;
+}
+
+.page-links > * {
+  display: inline-block;
+  position: relative;
+  margin-left: 12px;
+}
+
+.page-links > span {
+  color: $color--body-alt;
+  cursor: default;
+}
+
+.page-links a:not(:hover) {
+  color: inherit;
+}
+
+.page-links .page-numbers {
+  white-space: nowrap;
+}
+
+/* Portfolio pagination */
+.portfolio-pagination {
+  margin-top: 72px;
+}
+
+/* Portfolio navigation */
+.portfolio-navigation {
+  margin-top: 84px;
+
+  a {
+    &:not(:hover) {
+      color: inherit;
+    }
+  }
+
+  hr {
+    margin: 0;
+    opacity: 1;
+    border-top-width: 2px;
+  }
+}

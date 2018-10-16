@@ -1,0 +1,57 @@
+/* Countdown
+   ========================================================================== */
+
+.countdown {
+  $namespace: &;
+  text-align: center;
+
+  &__el {
+    margin-bottom: 24px;
+
+    &:not(:last-child) {
+      #{$namespace}__count {
+        @media (min-width: $break-point--md) {
+          &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: -15px;
+            border: 4px solid;
+            border-radius: 4px;
+            transform: translate(50%, -50%);
+          }
+        }
+      }
+
+      &[data-display="hours"],
+      &[data-display="minutes"] {
+        #{$namespace}__count {
+          &:before {
+            transform: translate(50%, -150%);
+          }
+          &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: -15px;
+            border: 4px solid;
+            border-radius: 4px;
+            transform: translate(50%, 50%);
+          }
+        }
+      }
+    }
+  }
+
+  &__count {
+    position: relative;
+    font-size: 112px;
+    line-height: 120px;
+  }
+
+  &__label {
+    font-size: 14px;
+  }
+}
