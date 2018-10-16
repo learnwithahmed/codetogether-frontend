@@ -1,0 +1,20 @@
+@import "../styles/modules/colors.module";
+
+/*  Footer */
+.siteFooter {
+  .widgetArea {
+    padding-top: 72px;
+    padding-bottom: 72px;
+    background-color: $color--tertiary;
+
+    a:not(:hover) {
+      color: inherit;
+    }
+  }
+}
+
+.siteInfo {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background-color: $color--body-background;
+}
