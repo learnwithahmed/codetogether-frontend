@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import Banner from './components/Banner'
+import Banner from './components/Banner';
 
 class App extends Component {
   render() {
-    return (
-     <Banner />
-    );
+    return <Banner />;
   }
 }
 
