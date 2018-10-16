@@ -3,22 +3,42 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import styles from './Typography.module.scss'
 
-const Typography = props => {
-  const { children, classes, className: classNameProp, variant, component: componentProp, paragraph, headlineMapping, ...other } = props
-  console.log(styles)
-  const className = classnames(
-    styles.typographyDefault,
-    styles[variant],
-    classNameProp,
-  );
+const defaultHeadlineMapping = {
+  h1: 'h1',
+  h2: 'h2',
+  h3: 'h3',
+  h4: 'h4',
+  h5: 'h5',
+  h6: 'h6',
+  subtitle1: 'h6',
+  subtitle2: 'h6',
+  body1: 'p',
+  body2: 'p',
+  body3: 'p',
+}
 
-  const Component = componentProp || (paragraph ? 'p' : headlineMapping[variant]) || 'span';
+const Typography = props => {
+  const {
+    children,
+    className: classNameProp,
+    variant,
+    component: componentProp,
+    paragraph,
+    headlineMapping,
+    ...other
+  } = props
+
+  const className = classnames(styles[variant], classNameProp)
+
+  const Component =
+    componentProp ||
+    (paragraph
+      ? 'p'
+      : headlineMapping[variant] || defaultHeadlineMapping[variant]) ||
+    'span'
 
   return (
-    <Component
-      className={className}
-      {...other}
-    > 
+    <Component className={className} {...other}>
       {children}
     </Component>
   )
@@ -27,40 +47,32 @@ const Typography = props => {
 Typography.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
-  component: PropTypes.oneOfType([PropTypes.string, PropTypes.func, PropTypes.object]),
   headlineMapping: PropTypes.object,
+  component: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.func,
+    PropTypes.object,
+  ]),
   paragraph: PropTypes.bool,
-  /**
-   * Applies the theme typography styles.
-   */
   variant: PropTypes.oneOf([
-    'display4',
-    'display3',
-    'display2',
     'display1',
-    'headline',
-    'title',
-    'subheading',
-    'body2',
+    'h1',
+    'h2',
+    'h3',
+    'h4',
+    'h5',
+    'h6',
+    'subtitle1',
+    'subtitle2',
     'body1',
-    'caption',
-    'button',
+    'body2',
+    'body3',
   ]),
 }
 Typography.defaultProps = {
-  headlineMapping: {
-    display4: 'h1',
-    display3: 'h1',
-    display2: 'h1',
-    display1: 'h1',
-    headline: 'h1',
-    title: 'h2',
-    subheading: 'h3',
-    body2: 'aside',
-    body1: 'p',
-  },
+  headlineMapping: defaultHeadlineMapping,
   paragraph: false,
-  variant: 'display4',
+  variant: 'display1',
 }
 
 export default Typography
