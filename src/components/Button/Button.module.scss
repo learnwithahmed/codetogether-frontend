@@ -1,0 +1,100 @@
+@import '../styles/colors.module';
+@import '../styles//all.module';
+/* Buttons
+   ========================================================================== */
+.root {
+  min-width: 64px;
+  min-height: 40px;
+  text-align: center;
+  display: inline-block;
+  font-family: $font-family--body;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  line-height: 1.4em;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  // white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 0;
+  box-shadow: 0 11px 22px rgba($color--body, 0.2);
+  transition: all 0.2s ease-in-out;
+  will-change: box-shadow;
+  box-sizing: border-box;
+
+  &.colorDefault {
+    &:hover,
+    &:focus,
+    &:active {
+      color: $color--body;
+      background-color: $color--tertiary;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 6px 14px rgba($color--body, 0.25);
+    text-decoration: none;
+  }
+
+  &:active {
+    box-shadow: 0 2px 6px rgba($color--body, 0.5);
+  }
+
+  &.colorPrimary {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      color: $color--body-lighten;
+      background-color: $color--primary;
+    }
+  }
+
+  &.colorSecondary {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      color: $color--body-lighten;
+      background-color: $color--secondary;
+    }
+  }
+
+  &.round {
+    border-radius: 48px;
+  }
+}
+
+.sizeSmall {
+  padding: 5px 15px;
+  min-width: 64px;
+  min-height: 30px;
+  font-size: 0.6rem;
+}
+
+.sizeLarge {
+  padding: 20px 40px;
+  min-width: 112px;
+  min-height: 50px;
+  font-size: 1.2rem;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+}
+
+.label {
+  width: 100%; // assure the correct width for iOS Safari
+  display: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+}
