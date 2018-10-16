@@ -1,6 +1,7 @@
 import { addDecorator, configure } from '@storybook/react';
 import { setOptions } from '@storybook/addon-options'
 import { withKnobs } from '@storybook/addon-knobs'
+import '../src/components/styles/main.module.scss'
 
 const components = require.context('../src/components', true, /\/stories\.js$/)
 
@@ -9,7 +10,7 @@ function loadStories() {
 }
 
 setOptions({
-  name: 'CodeTogether UI',
+  name: 'CT Styleguide',
   sortStoriesByKind: true,
 })
 
