@@ -4,6 +4,10 @@
 @import './colors.module';
 @import './all.module';
 
+*:focus {
+  outline: none;
+}
+
 html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -63,6 +67,18 @@ h6 {
   span {
     display: inline-block;
   }
+}
+
+a {
+  color: $color--link;
+  text-decoration: none;
+  transition: color 0.4s 0.1s ease-out;
+}
+
+a:hover,
+a:focus {
+  color: $color--link-hover;
+  outline: 0;
 }
 
 p {
