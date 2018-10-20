@@ -1,15 +1,16 @@
 @import '../styles/colors.module';
 
+.root {
+  padding-top: 72px;
+  padding-bottom: 72px;
+  background-color: $color--tertiary;
+}
 /*  Footer */
-.siteFooter {
-  .widgetArea {
-    padding-top: 72px;
-    padding-bottom: 72px;
-    background-color: $color--tertiary;
+.container {
+  display: flex;
 
-    a:not(:hover) {
-      color: inherit;
-    }
+  a:not(:hover) {
+    color: inherit;
   }
 }
 

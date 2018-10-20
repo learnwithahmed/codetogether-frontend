@@ -2,20 +2,26 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import MonkeyIcon from '../icons/Monkey'
 import SquigglyIcon from '../icons/Squiggly'
+import Typography from '../Typography'
+import Button from '../Button'
 import NotFound from './'
 
 const stories = storiesOf('Components/NotFound', module)
 
 export const Default = () => (
-    <NotFound>
-      <MonkeyIcon/>
-      <SquigglyIcon/>
-      <h2>Oh snap! 404&hellip;</h2>
-      <h6>Meet the monkey, Our engineer! He’s really not sure how you landed here!</h6>
-      <p>
-        <a href="index.html">Go back to home</a>
-      </p>
-    </NotFound>
+  <NotFound>
+    <MonkeyIcon />
+    <SquigglyIcon />
+    <Typography variant="h2">Oh snap! 404&hellip;</Typography>
+    <Typography variant="h6">
+      Meet the monkey, Our engineer! He’s really not sure how you landed here!
+    </Typography>
+    <p style={{ paddingTop: 24, marginTop: 24 }}>
+      <Button color="primary" href="index.html">
+        Go back to home
+      </Button>
+    </p>
+  </NotFound>
 )
 
 stories.add('Default', Default)

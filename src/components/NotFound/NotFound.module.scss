@@ -3,10 +3,11 @@
 /* 404
    ========================================================================== */
 .monkey {
-  width: 540px;
+  // width: 540px;
   max-width: 100%;
   margin-right: auto;
   margin-left: auto;
+  text-align: center;
 
   // not all browsers support svg F
   @at-root .is-chrome:not(.is-touch) #{&} {
