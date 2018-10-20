@@ -1,0 +1,16 @@
+.root {
+  display: flex;
+  max-height: 100%;
+}
+.centered {
+  justify-content: center;
+}
+.fullWidth {
+  display: flex;
+  width: 100%;
+}
+.mini {
+  & > * + * {
+      margin-left: 10 * 2px;
+  }
+}
