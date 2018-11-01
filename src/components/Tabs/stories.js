@@ -5,15 +5,12 @@ import { storiesOf } from '@storybook/react'
 import { boolean, select } from '@storybook/addon-knobs'
 import { withState, Story } from '../utils/stories'
 import Tab from '../Tab'
+import TabPanel from '../TabPanel'
 import Tabs from './'
 
 const stories = storiesOf('Components/Tabs', module)
 
 const initialState = { value: 0 }
-
-const TabPanel = ({ children }) => (
-  <div style={{ padding: '10px', background: '#ccc' }}>{children}</div>
-)
 
 export const Default = withState(
   setState => state => (

@@ -1,0 +1,16 @@
+.root {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.gutters {
+  padding-right: 24px;
+  padding-left: 24px;
+}
+.regular {
+  min-height: 64px;
+}
+
+.dense {
+  min-height: 48px;
+}

@@ -1,0 +1,9 @@
+.root {
+  &:before {
+    content: "";
+    display: block;
+    margin-bottom: 14px;
+    border-top: solid 1px;
+    opacity: .1;
+  }
+}

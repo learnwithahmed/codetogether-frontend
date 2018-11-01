@@ -1,0 +1,28 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 100%;
+  transition: transform 0.25s ease-in-out;
+  will-change: transform;
+  z-index: 1201;
+  box-sizing: border-box;
+}
+
+.positionFixed {
+  position: fixed;
+  top: 0;
+  left: auto;
+  right: 0;
+  // Prevent browser repaints when element is fixed.
+  backface-visibility: hidden;
+}
+.positionAbsolute {
+  position: absolute;
+  top: 0;
+  left: auto;
+  right: 0;
+}
+.positionStatic {
+  position: static;
+}
