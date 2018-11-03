@@ -1,0 +1,35 @@
+.root {
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentColor;
+  flex-shrink: 0;
+  font-size: 24px;
+}
+
+.colorPrimary {
+  color: pink;
+}
+
+.colorSecondary {
+  color: palegreen;
+}
+.colorError {
+  color: purple;
+}
+.colorDisabled {
+  color: darkgrey;
+}
+
+.fontSizeInherit {
+  font-size: inherit;
+}
+
+.fontSizeSmall {
+  font-size: 20px;
+}
+
+.fontSizeLarge {
+  font-size: 36px;
+}
