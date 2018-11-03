@@ -6,7 +6,11 @@ import Burger from '.'
 const stories = storiesOf('Components/Burger', module)
 
 export const Default = () => (
-  <Burger close={boolean('close', false)} style={{ margin: 100 }} />
+	<Burger
+		close={boolean('close', false)}
+		back={boolean('back', false)}
+		style={{ margin: 30 }}
+	/>
 )
 
 stories.add('Default', Default)

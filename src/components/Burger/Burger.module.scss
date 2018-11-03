@@ -5,6 +5,13 @@
   height: 1em;
   font-size: 30px;
 }
+.icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: transform 200ms ease-in, opacity 200ms ease-in;
+}
 .burgerIcon {
   transform: translate3d(0, 0, 0);
   .idle & {
@@ -13,17 +20,26 @@
   .close & {
     transform: translate3d(100%, 0, 0);
   }
-}
-.crossIcon {
-  transform: translate3d(-100%, 0, 0);
-  .close & {
+  .back & {
     transform: translate3d(-100%, 0, 0);
   }
 }
-.icon {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: transform 200ms ease-in, opacity 200ms ease-in;
+.crossIcon {
+  transform: translate3d(-100%, 0, 0);
+  .close:not(.back) & {
+    opacity: 1;
+  }
+  .close & {
+    transform: translate3d(0, 0, 0);
+  }
+  .black & {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+.backIcon {
+  transform: translate3d(100%, 0, 0);
+  .back & {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
 }
