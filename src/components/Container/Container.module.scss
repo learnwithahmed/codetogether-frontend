@@ -1,0 +1,22 @@
+@import '../styles/all.module';
+
+.root {
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+
+	@media (min-width: $break-point--sm) {
+		max-width: 540px;
+	}
+	@media (min-width: $break-point--md) {
+		max-width: 720px;
+	}
+	@media (min-width: $break-point--lg) {
+		max-width: 960px;
+	}
+	@media (min-width: $break-point--xl) {
+		max-width: 1140px;
+	}
+}

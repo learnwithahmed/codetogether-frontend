@@ -1,31 +1,31 @@
 .root {
-  text-align: center;
-  flex: 0 0 auto;
-  padding: 5px;
-  border-radius: 0;
-  overflow: visible;
-  color: inherit;
-  &:hover {
-    background-color: transparent;
-    color: rgba(63, 58, 58, 0.5);
-    &.disabled {
-      background-color: transparent;
-    }
-  }
-  &.disabled {
-    background-color: transparent;
-  }
+	text-align: center;
+	flex: 0 0 auto;
+	padding: 5px;
+	border-radius: 0;
+	overflow: visible;
+	color: inherit;
+	&:hover {
+		background-color: rgba(159, 159, 159, 0.13);
+		color: rgba(63, 58, 58, 0.5);
+		&.disabled {
+			background-color: transparent;
+		}
+	}
+	&.disabled {
+		background-color: transparent;
+	}
 }
 .colorInherit {
-  color: inherit;
-  &:hover {
-    color: inherit;
-  }
+	color: inherit;
+	&:hover {
+		color: inherit;
+	}
 }
 
 .label {
-  width: 100%;
-  display: flex;
-  align-items: inherit;
-  justify-content: inherit;
+	width: 100%;
+	display: flex;
+	align-items: inherit;
+	justify-content: inherit;
 }

@@ -1,102 +1,101 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,700');
 @import '../styles/all.module';
 @import '../styles/colors.module';
 /* Styles applied to the root element if `variant="display4"`. */
 
 .display1 {
-  font-weight: 700;
-  font-family: $font-family--display;
-  font-size: 42px;
-  line-height: 48px;
-  letter-spacing: -0.02em;
-  margin-top: 0;
+	font-weight: 700;
+	font-family: $font-family--display;
+	font-size: 42px;
+	line-height: 48px;
+	letter-spacing: -0.02em;
+	margin-top: 0;
 
-  @media (min-width: $break-point--lg) {
-    font-size: 112px;
-    line-height: 120px;
-    letter-spacing: -0.04em;
-  }
+	@media (min-width: $break-point--lg) {
+		font-size: 112px;
+		line-height: 120px;
+		letter-spacing: -0.04em;
+	}
 }
 
 .h1 {
-  font-size: 42px;
-  line-height: 48px;
-  letter-spacing: -0.02em;
-  // margin-top: 0;
+	font-size: 42px;
+	line-height: 48px;
+	letter-spacing: -0.02em;
+	// margin-top: 0;
 
-  @media (min-width: $break-point--lg) {
-    font-size: 56px;
-    line-height: 72px;
-  }
+	@media (min-width: $break-point--lg) {
+		font-size: 56px;
+		line-height: 72px;
+	}
 }
 
 .h2 {
-  font-size: 38px;
-  line-height: 48px;
-  // margin-top: 0;
+	font-size: 38px;
+	line-height: 48px;
+	// margin-top: 0;
 
-  @media (min-width: $break-point--lg) {
-    font-size: 45px;
-  }
+	@media (min-width: $break-point--lg) {
+		font-size: 45px;
+	}
 }
 
 .h3 {
-  font-size: 34px;
-  line-height: 48px;
-  // margin-top: 0;
+	font-size: 34px;
+	line-height: 48px;
+	// margin-top: 0;
 }
 
 .h4 {
-  font-size: 24px;
-  line-height: 24px;
-  margin: 0 0 16px;
+	font-size: 24px;
+	line-height: 24px;
+	margin: 0 0 16px;
 }
 
 .h5 {
-  font-size: 20px;
-  line-height: 24px;
-  letter-spacing: 0.02em;
-  margin-top: 0;
+	font-size: 20px;
+	line-height: 24px;
+	letter-spacing: 0.02em;
+	margin-top: 0;
 }
 
 .h6 {
-  font-size: 16px;
-  line-height: 24px;
-  margin-top: 0;
+	font-size: 16px;
+	line-height: 24px;
+	margin-top: 0;
 }
 .subtitle1 {
-  font-family: $font-family--body;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 24px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  margin-top: 0;
-  a {
-    color: inherit;
-  }
+	font-family: $font-family--body;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 24px;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	margin-top: 0;
+	a {
+		color: inherit;
+	}
 }
 .subtitle2 {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: $color--body-alt;
-  margin-top: 0;
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	color: $color--body-alt;
+	margin-top: 0;
 
-  a:not(:hover) {
-    color: inherit;
-  }
+	a:not(:hover) {
+		color: inherit;
+	}
 }
 
 .body1 {
-  font-weight: normal;
+	font-weight: normal;
 }
 .body2 {
-  font-weight: 700;
+	font-weight: 700;
 }
 .body3 {
-  font-size: 14px;
-  font-weight: normal;
-  color: $color--body-alt;
+	font-size: 14px;
+	font-weight: normal;
+	color: $color--body-alt;
 }

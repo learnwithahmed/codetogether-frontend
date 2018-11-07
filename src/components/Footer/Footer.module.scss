@@ -1,21 +1,14 @@
 @import '../styles/colors.module';
 
-.root {
-  padding-top: 72px;
-  padding-bottom: 72px;
-  background-color: $color--tertiary;
-}
 /*  Footer */
-.container {
-  display: flex;
-
-  a:not(:hover) {
-    color: inherit;
-  }
+.root {
+	a:not(:hover) {
+		color: inherit;
+	}
 }
 
 .siteInfo {
-  padding-top: 24px;
-  padding-bottom: 24px;
-  background-color: $color--body-background;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	background-color: $color--body-background;
 }

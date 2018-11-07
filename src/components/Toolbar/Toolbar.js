@@ -4,40 +4,40 @@ import classNames from 'classnames'
 import styles from './Toolbar.module.scss'
 
 const Toolbar = props => {
-  const {
-    children,
-    className: classNameProp,
-    disableGutters,
-    variant,
-    ...other
-  } = props
+	const {
+		children,
+		className: classNameProp,
+		disableGutters,
+		variant,
+		...other
+	} = props
 
-  const className = classNames(
-    styles.root,
-    styles[variant],
-    {
-      [styles.gutters]: !disableGutters,
-    },
-    classNameProp,
-  )
+	const className = classNames(
+		styles.root,
+		styles[variant],
+		{
+			[styles.gutters]: !disableGutters,
+		},
+		classNameProp,
+	)
 
-  return (
-    <div className={className} {...other}>
-      {children}
-    </div>
-  )
+	return (
+		<div className={className} {...other}>
+			{children}
+		</div>
+	)
 }
 
 Toolbar.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.string,
-  disableGutters: PropTypes.bool,
-  variant: PropTypes.oneOf(['regular', 'dense']),
+	children: PropTypes.node,
+	className: PropTypes.string,
+	disableGutters: PropTypes.bool,
+	variant: PropTypes.oneOf(['regular', 'dense']),
 }
 
 Toolbar.defaultProps = {
-  disableGutters: false,
-  variant: 'regular',
+	disableGutters: false,
+	variant: 'regular',
 }
 
 export default Toolbar

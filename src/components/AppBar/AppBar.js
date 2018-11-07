@@ -27,6 +27,7 @@ class AppBar extends React.Component {
 			className: classNameProps,
 			position,
 			transparent,
+			appBarRef,
 			...other
 		} = this.props
 
@@ -41,7 +42,11 @@ class AppBar extends React.Component {
 			classNameProps,
 		)
 		return (
-			<header className={classnames(styles.root, className)} {...other}>
+			<header
+				className={classnames(styles.root, className)}
+				ref={appBarRef}
+				{...other}
+			>
 				{transparent && (
 					<EventListener
 						target="window"

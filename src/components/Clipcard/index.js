@@ -1,1 +1,1 @@
-export { default } from './Clipcard'
+export { default } from './ClipCard'

@@ -1,20 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
-import styles from './Clipcard.module.css'
+import styles from './ClipCard.module.scss'
 
-const Clipcard = props => {
-  const { children, className, ...other } = props
-  return (
-    <div className={classnames(styles.root, className)} {...other}>
-      {children}
-    </div>
-  )
+const ClipCard = props => {
+	const { children, className, ...other } = props
+	return (
+		<div className={classnames(styles.root, className)} {...other}>
+			{children}
+		</div>
+	)
 }
 
-Clipcard.propTypes = {
-  children: PropTypes.node.isRequired,
-  className: PropTypes.string,
+ClipCard.propTypes = {
+	children: PropTypes.node.isRequired,
+	className: PropTypes.string,
 }
 
-export default Clipcard
+export default ClipCard
