@@ -1,0 +1,22 @@
+{
+	"extends": [
+		"stylelint-config-property-sort-order-smacss",
+		"stylelint-config-standard"
+	],
+	"rules": {
+		"at-rule-empty-line-before": null,
+		"at-rule-no-unknown": null,
+		"color-hex-length": "short",
+		"declaration-colon-newline-after": null,
+		"declaration-empty-line-before": null,
+		"font-family-name-quotes": null,
+		"indentation": "tabs",
+		"tab-size": 4,
+		"max-empty-lines": 4,
+		"max-nesting-depth": 3,
+		"no-descending-specificity": null,
+		"number-leading-zero": "never",
+		"string-quotes": "single",
+		"value-list-comma-newline-after": null
+	}
+}
