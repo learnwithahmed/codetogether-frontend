@@ -25,7 +25,6 @@ const Grid = props => {
 		zeroMinWidth,
 		...other
 	} = props
-
 	const className = classnames(
 		{
 			[styles.container]: container,
@@ -177,19 +176,19 @@ Grid.propTypes = {
 }
 
 Grid.defaultProps = {
-	alignContent: 'stretch',
-	alignItems: 'stretch',
 	component: 'div',
 	container: false,
-	direction: 'row',
+	alignContent: 'stretch',
+	alignItems: 'stretch',
 	justify: 'flex-start',
-	lg: false,
-	md: false,
-	sm: false,
-	spacing: 0,
+	direction: 'row',
 	wrap: 'wrap',
-	xl: false,
 	xs: false,
+	sm: false,
+	md: false,
+	lg: false,
+	xl: false,
+	spacing: 0,
 	zeroMinWidth: false,
 }
 export default Grid
