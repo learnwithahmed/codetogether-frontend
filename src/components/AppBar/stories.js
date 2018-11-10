@@ -3,74 +3,56 @@ import { storiesOf } from '@storybook/react'
 import { select } from '@storybook/addon-knobs'
 import Typography from '../Typography'
 import CrossOne from '../icons/Cross'
-import List from '../List'
+import AppBarMenu from '../AppBarMenu'
 import IconButton from '../IconButton'
 import Button from '../Button'
 import Toolbar from '../Toolbar'
 import Container from '../Container'
-import Column from '../Column'
-import Row from '../Row'
+import Grid from '../Grid'
 import AppBar from '.'
 
 const stories = storiesOf('Components/AppBar', module)
+export const colorOptions = ['inherit', 'default']
+export const positionOptions = ['fixed', 'absolute', 'static']
+
+export const createKnobs = () => ({
+	color: select('color', colorOptions, 'default'),
+	position: select('position', positionOptions, 'fixed'),
+})
 
 export const Default = () => (
 	<div style={{ height: '100vh', background: '#eee' }}>
-		<AppBar
-			color={select(
-				'color',
-				{
-					inherit: 'inherit',
-					default: 'default',
-				},
-				'default',
-			)}
-			position={select(
-				'position',
-				{
-					fixed: 'fixed',
-					absolute: 'absolute',
-					static: 'static',
-				},
-				'fixed',
-			)}
-		>
+		<AppBar {...createKnobs()}>
 			<Toolbar>
 				<Container>
-					<Row>
-						<Column size="12">
-							<div
-								style={{
-									display: 'flex',
-									alignItems: 'center',
-								}}
-							>
-								<div style={{ flex: 2 }}>
-									<IconButton>
-										<Typography variant="h4">
-											CodeTogether
-										</Typography>
-									</IconButton>
-								</div>
+					<Grid container alignItems="center" xs={12} xl={12}>
+						<div style={{ flex: 2 }}>
+							<IconButton>CodeTogether</IconButton>
+						</div>
+						<div
+							style={{
+								flexGrow: 3,
+								flexShrink: 2,
+								textAlign: 'right',
+							}}
+						>
+							<AppBarMenu>
+								{Array.from(new Array(8), (val, index) => (
+									<a href="#" key={index}>
+										Item
+									</a>
+								))}
+							</AppBarMenu>
+						</div>
 
-								<List>
-									{Array.from(new Array(8), (val, i) => (
-										<a href="#" key={i}>
-											Item
-										</a>
-									))}
-								</List>
-
-								<div
-									style={{
-										padding: '12px 0 12px 48px',
-									}}
-								>
-									<Button color="primary">Signup</Button>
-								</div>
-							</div>
-						</Column>
-					</Row>
+						<div
+							style={{
+								padding: '12px 0 12px 48px',
+							}}
+						>
+							<Button color="primary">Signup</Button>
+						</div>
+					</Grid>
 				</Container>
 			</Toolbar>
 		</AppBar>

@@ -1,8 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import Typography from '../Typography'
-import Row from '../Row'
-import Column from '../Column'
+import Grid from '../Grid'
 import ClipCardLink from '../ClipCardLink'
 import ClipCardBody from '../ClipCardBody'
 
@@ -10,16 +9,16 @@ const stories = storiesOf('Components/ClipCard', module)
 
 export const Default = () => (
 	<React.Fragment>
-		<Row>
-			<Column size="2">
+		<Grid container alignItems="center">
+			<Grid xs={12} md={2} lg={1}>
 				<Typography
 					variant="body3"
 					style={{ paddingTop: 12, marginBottom: 0 }}
 				>
 					16:30
 				</Typography>
-			</Column>
-			<Column size="10">
+			</Grid>
+			<Grid xs={12} md={10} lg={11}>
 				<ClipCardBody>
 					<ClipCardLink />
 					<Typography component="span" variant="subtitle2">
@@ -32,18 +31,18 @@ export const Default = () => (
 						By Ahmed Abdulrahman
 					</Typography>
 				</ClipCardBody>
-			</Column>
-		</Row>
-		<Row>
-			<Column size="2">
+			</Grid>
+		</Grid>
+		<Grid container alignItems="center">
+			<Grid xs={12} md={2} lg={1}>
 				<Typography
 					variant="body3"
 					style={{ paddingTop: 12, marginBottom: 0 }}
 				>
 					20:30
 				</Typography>
-			</Column>
-			<Column size="10">
+			</Grid>
+			<Grid xs={12} md={10} lg={11}>
 				<ClipCardBody>
 					<ClipCardLink />
 					<Typography component="span" variant="subtitle2">
@@ -54,11 +53,11 @@ export const Default = () => (
 						By Ahmed Abdulrahman
 					</Typography>
 				</ClipCardBody>
-			</Column>
-		</Row>
+			</Grid>
+		</Grid>
 	</React.Fragment>
 )
-
+console.log(Default.props)
 stories.add('Default', Default)
 
 export default Default
