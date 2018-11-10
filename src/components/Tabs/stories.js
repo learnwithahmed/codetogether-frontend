@@ -3,9 +3,10 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { boolean, select } from '@storybook/addon-knobs'
-import { withState, Story } from '../utils/stories'
+import { withState } from '../utils/stories'
 import Tab from '../Tab'
 import TabPanel from '../TabPanel'
+import Typography from '../Typography'
 import Tabs from './'
 
 const stories = storiesOf('Components/Tabs', module)
@@ -31,9 +32,24 @@ export const Default = withState(
 				value={state.value}
 				onChange={(event, value) => setState({ value })}
 			>
-				<Tab>Day 1</Tab>
-				<Tab>Day 2</Tab>
-				<Tab>Day 3</Tab>
+				<Tab>
+					Day 1 {''}
+					<Typography component="span" variant="subtitle2">
+						— 25 Nov
+					</Typography>
+				</Tab>
+				<Tab>
+					Day 2 {''}
+					<Typography component="span" variant="subtitle2">
+						— 26 Nov
+					</Typography>
+				</Tab>
+				<Tab>
+					Day 3 {''}
+					<Typography component="span" variant="subtitle2">
+						— 27 Nov
+					</Typography>
+				</Tab>
 			</Tabs>
 
 			{state.value === 0 && <TabPanel>TabPanel 1</TabPanel>}
