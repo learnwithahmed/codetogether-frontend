@@ -9,13 +9,17 @@ const ButtonBase = props => {
 		className: classNameProp,
 		component,
 		disabled,
+		madeWithLove,
 		innerRef,
 		type,
 		...other
 	} = props
 	const className = classnames(
 		styles.root,
-		{ [styles.disabled]: disabled },
+		{
+			[styles.disabled]: disabled,
+			[styles.madeWithLove]: madeWithLove,
+		},
 		classNameProp,
 	)
 
@@ -47,44 +51,17 @@ const ButtonBase = props => {
 }
 
 ButtonBase.propTypes = {
-	/**
-	 * The content of the component.
-	 */
 	children: PropTypes.node,
-	/**
-	 * The CSS class name of the root element.
-	 */
 	className: PropTypes.string,
-	/**
-	 * The component used for the root node.
-	 * Either a string to use a DOM element or a component.
-	 */
 	component: PropTypes.oneOfType([
 		PropTypes.string,
 		PropTypes.func,
 		PropTypes.object,
 	]),
-	/**
-	 * If `true`, the base button will be disabled.
-	 */
 	disabled: PropTypes.bool,
-	/**
-	 * Use this property to pass a ref callback to the native root component.
-	 */
+	madeWithLove: PropTypes.bool,
 	innerRef: PropTypes.func,
-	/**
-	 * @ignore
-	 */
-	role: PropTypes.string,
-	/**
-	 * @ignore
-	 */
 	tabIndex: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-	/**
-	 * Used to control the button's purpose.
-	 * This property passes the value to the `type` attribute of the native button component.
-	 * Valid property values include `button`, `submit`, and `reset`.
-	 */
 	type: PropTypes.string,
 }
 
