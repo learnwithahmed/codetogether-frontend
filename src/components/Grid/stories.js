@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 import { select } from '@storybook/addon-knobs'
 import Grid from './Grid'
 
-const stories = storiesOf('Components/Grid', module)
+const stories = storiesOf('1. Components/Grid', module)
 
 export const justifyOptions = [
 	'flex-start',

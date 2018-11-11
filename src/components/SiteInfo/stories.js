@@ -6,7 +6,7 @@ import ButtonBase from '../ButtonBase'
 import Heart from '../icons/Heart'
 import SiteInfo from './'
 
-const stories = storiesOf('Components/SiteInfo', module)
+const stories = storiesOf('1. Components/SiteInfo', module)
 
 export const Default = () => (
 	<SiteInfo>
@@ -14,7 +14,7 @@ export const Default = () => (
 			<Grid container>
 				<Grid xs={12} md={6} xl={12}>
 					<ButtonBase component="a" madeWithLove>
-						With <Heart style={{ fill: 'ff00bf' }} /> by
+						Made With <Heart style={{ fill: 'ff00bf' }} /> by
 						CodeTogether
 					</ButtonBase>
 				</Grid>

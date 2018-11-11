@@ -16,7 +16,7 @@ const Button = props => {
 		size,
 		...other
 	} = props
-	console.log('color', [styles.colorPrimary])
+
 	const className = classnames(
 		styles.root,
 		{

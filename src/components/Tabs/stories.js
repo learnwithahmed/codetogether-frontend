@@ -9,7 +9,7 @@ import TabPanel from '../TabPanel'
 import Typography from '../Typography'
 import Tabs from './'
 
-const stories = storiesOf('Components/Tabs', module)
+const stories = storiesOf('1. Components/Tabs', module)
 
 const initialState = { value: 0 }
 

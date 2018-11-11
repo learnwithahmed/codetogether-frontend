@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 import Typography from '../Typography'
 import Banner from './'
 
-const stories = storiesOf('Components/Banner', module)
+const stories = storiesOf('1. Components/Banner', module)
 
 export const Default = () => (
 	<Banner>

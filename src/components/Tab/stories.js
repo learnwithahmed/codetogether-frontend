@@ -4,7 +4,7 @@ import { text, boolean, select } from '@storybook/addon-knobs'
 import Typography from '../Typography'
 import Tab from '.'
 
-const stories = storiesOf('Components/Tab', module)
+const stories = storiesOf('1. Components/Tab', module)
 
 export const Default = () => (
 	<Tab

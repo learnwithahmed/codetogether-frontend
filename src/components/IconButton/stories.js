@@ -4,7 +4,7 @@ import { boolean } from '@storybook/addon-knobs'
 import CrossIcon from '../icons/Cross'
 import IconButton from '.'
 
-const stories = storiesOf('Components/IconButton', module)
+const stories = storiesOf('1. Components/IconButton', module)
 
 export const Default = () => (
 	<IconButton disabled={boolean('disabled', false)}>

@@ -6,7 +6,7 @@ import Grid from '../Grid'
 import Container from '../Container'
 import Footer from './'
 
-const stories = storiesOf('Components/Footer', module)
+const stories = storiesOf('1. Components/Footer', module)
 
 export const Default = () => (
 	<Footer>

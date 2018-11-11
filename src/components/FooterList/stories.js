@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import FooterList from './'
 
-const stories = storiesOf('Components/FooterList', module)
+const stories = storiesOf('1. Components/FooterList', module)
 
 export const Default = () => (
     <FooterList>

@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 import { boolean } from '@storybook/addon-knobs'
 import ButtonBase from '.'
 
-const stories = storiesOf('Components/ButtonBase', module)
+const stories = storiesOf('1. Components/ButtonBase', module)
 
 export const Default = () => (
   <ButtonBase disabled={boolean('disabled', false)}>

@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 import { select } from '@storybook/addon-knobs'
 import Svg from '.'
 
-const stories = storiesOf('Components/Svg', module)
+const stories = storiesOf('1. Components/Svg', module)
 
 export const Default = () => (
 	<Svg

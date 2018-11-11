@@ -4,7 +4,7 @@ import { text } from '@storybook/addon-knobs'
 import Typography from '../Typography'
 import PageHeader from './'
 
-const stories = storiesOf('Components/PageHeader', module)
+const stories = storiesOf('1. Components/PageHeader', module)
 
 export const Default = () => (
 	<PageHeader>

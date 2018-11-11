@@ -7,7 +7,7 @@ export const createKnobs = () => ({
 	paragraph: boolean('paragraph', false),
 })
 
-const stories = storiesOf('Components/Typography', module)
+const stories = storiesOf('1. Components/Typography', module)
 
 export const Default = () => (
 	<div>

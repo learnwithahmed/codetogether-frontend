@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 import { text, select } from '@storybook/addon-knobs'
 import Button from '.'
 
-const stories = storiesOf('Components/Button', module)
+const stories = storiesOf('1. Components/Button', module)
 
 export const Default = () => (
 	<Button

@@ -5,7 +5,7 @@ import Grid from '../Grid'
 import ClipCardLink from '../ClipCardLink'
 import ClipCardBody from '../ClipCardBody'
 
-const stories = storiesOf('Components/ClipCard', module)
+const stories = storiesOf('1. Components/ClipCard', module)
 
 export const Default = () => (
 	<React.Fragment>
@@ -57,7 +57,6 @@ export const Default = () => (
 		</Grid>
 	</React.Fragment>
 )
-console.log(Default.props)
 stories.add('Default', Default)
 
 export default Default
