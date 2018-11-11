@@ -32,12 +32,12 @@ Toolbar.propTypes = {
 	children: PropTypes.node,
 	className: PropTypes.string,
 	disableGutters: PropTypes.bool,
-	variant: PropTypes.oneOf(['regular', 'dense']),
+	variant: PropTypes.oneOf(['default', 'regular', 'dense']),
 }
 
 Toolbar.defaultProps = {
 	disableGutters: false,
-	variant: 'regular',
+	variant: 'default',
 }
 
 export default Toolbar
