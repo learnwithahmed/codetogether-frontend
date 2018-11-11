@@ -5,10 +5,28 @@ import List from '../List'
 import styles from './AppBarMenu.module.scss'
 
 const AppBarMenu = props => {
-	const { children, className, ...other } = props
+	const {
+		children,
+		className,
+		ListProps: {
+			className: ListPropsClassName,
+			isMobile,
+			...ListPropsProp
+		} = {},
+		...other
+	} = props
 	return (
-		<nav {...other}>
-			<List className={classnames(styles.root, className)}>
+		<nav className={className} {...other}>
+			<List
+				className={classnames(
+					styles.root,
+					{
+						[styles.isMobile]: isMobile,
+					},
+					ListPropsClassName,
+				)}
+				{...ListPropsProp}
+			>
 				{children}
 			</List>
 		</nav>
@@ -18,6 +36,7 @@ const AppBarMenu = props => {
 AppBarMenu.propTypes = {
 	children: PropTypes.node.isRequired,
 	className: PropTypes.string,
+	ListProps: PropTypes.object,
 }
 
 export default AppBarMenu

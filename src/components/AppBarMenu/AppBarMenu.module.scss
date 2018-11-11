@@ -1,9 +1,7 @@
 @import '../styles/colors.module';
+@import '../../components/styles/all.module';
 
 .root {
-	flex-grow: 3;
-	flex-shrink: 2;
-
 	& > li {
 		display: inline-block;
 		margin-left: 44px;
@@ -29,11 +27,24 @@
 		& > a {
 			color: inherit;
 			display: block;
-			padding-top: 28px;
-			padding-bottom: 28px;
+			// padding-top: 28px;
+			// padding-bottom: 28px;
 			line-height: 1;
 			font-weight: 700;
 			z-index: 1;
 		}
+
+		@media (max-width: $break-point--xl) {
+			flex: 1;
+			display: flex;
+			align-items: center;
+			margin-left: 10px;
+		}
+	}
+
+	@media (max-width: $break-point--sm) {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
 	}
 }
