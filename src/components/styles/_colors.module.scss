@@ -1,17 +1,21 @@
 // Colors
 
 //
-$color--body: #222 !default;
+$color--body: #000020 !default;
 $color--body-alt: #8d929c !default;
 $color--body-lighten: #fff !default;
 $color--body-background: #fff !default;
 
-$color--primary: #011eff !default; // high contrast with lighter colors
-$color--secondary: #ff00bf !default; // high contrast with lighter colors
+$color--primary: #3130eb !default; // high contrast with lighter colors
+$color--secondary: #eb30c5 !default; // high contrast with lighter colors
 $color--tertiary: #eff0f1 !default; // lighter color, high contrast with darker colors
 
-$color--link: #011eff !default;
-$color--link-hover: #ff00bf !default;
+$color--link: rgba(255, 255, 255, 0.8) !default;
+$color--link-hover: #3130eb !default;
 
 $color--code: #abb2bf !default;
 $color--code-background: #434851 !default;
+$color--dark-background: #000020 !default;
+
+$color--box-shadow: rgba(0, 1, 31, 0.05);
+$color--box-shadow-hover: rgba(0, 1, 31, 0.2);
