@@ -1,99 +1,98 @@
 @import '../styles/colors.module';
 @import '../styles/all.module';
-/* Buttons
-   ========================================================================== */
+
 .root {
-  display: inline-block;
-  min-width: 64px;
-  min-height: 40px;
-  text-align: center;
-  font-family: $font-family--body;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1.4em;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  // white-space: nowrap;
-  vertical-align: middle;
-  user-select: none;
-  border: 0;
-  padding: 18px 32px;
-  border-radius: 0;
-  box-shadow: 0 11px 22px rgba($color--body, 0.1);
-  transition: all 0.2s ease-in-out;
-  will-change: box-shadow;
-  box-sizing: border-box;
+	display: inline-block;
+	box-sizing: border-box;
+	min-width: 64px;
+	min-height: 40px;
+	padding: 18px 32px;
+	transition: all 0.2s ease-in-out;
+	border: 0;
+	border-radius: 0;
+	box-shadow: 0 0 0 rgba($color--box-shadow, 0.1);
+	font-family: $font-family--body;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 700;
+	letter-spacing: 0.2em;
+	line-height: 1.4em;
+	text-align: center;
+	text-transform: uppercase;
+	// white-space: nowrap;
+	vertical-align: middle;
+	user-select: none;
+	will-change: box-shadow;
 
-  &.colorDefault {
-    &:hover,
-    &:focus,
-    &:active {
-      color: $color--body;
-      background-color: $color--tertiary;
-    }
-  }
+	&.colorDefault {
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: $color--tertiary;
+			color: $color--body;
+		}
+	}
 
-  &:hover {
-    box-shadow: 0 6px 14px rgba($color--body, 0.25);
-    text-decoration: none;
-  }
+	&:hover {
+		box-shadow: 0 4px 16px rgba($color--box-shadow-hover, 0.25);
+		text-decoration: none;
+	}
 
-  &:active {
-    box-shadow: 0 2px 6px rgba($color--body, 0.5);
-  }
+	&:active {
+		box-shadow: 0 2px 6px rgba($color--body, 0.5);
+	}
 
-  &.colorPrimary {
-    &,
-    &:hover,
-    &:focus,
-    &:active {
-      color: $color--body-lighten;
-      background-color: $color--primary;
-    }
-  }
+	&.colorPrimary {
+		&,
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: $color--primary;
+			color: $color--body-lighten;
+		}
+	}
 
-  &.colorSecondary {
-    &,
-    &:hover,
-    &:focus,
-    &:active {
-      color: $color--body-lighten;
-      background-color: $color--secondary;
-    }
-  }
+	&.colorSecondary {
+		&,
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: $color--secondary;
+			color: $color--body-lighten;
+		}
+	}
 
-  &.round {
-    border-radius: 48px;
-  }
+	&.round {
+		border-radius: 48px;
+	}
 }
 
 .sizeSmall {
-  padding: 5px 15px;
-  min-width: 64px;
-  min-height: 30px;
-  font-size: 0.6rem;
+	min-width: 64px;
+	min-height: 30px;
+	padding: 5px 15px;
+	font-size: 0.6rem;
 }
 
 .sizeLarge {
-  padding: 20px 40px;
-  min-width: 112px;
-  min-height: 50px;
-  font-size: 1.2rem;
+	min-width: 112px;
+	min-height: 50px;
+	padding: 20px 40px;
+	font-size: 1.2rem;
 }
 
 .fullWidth {
-  width: 100%;
+	width: 100%;
 }
 
 .content {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 }
 
 .label {
-  width: 100%; // assure the correct width for iOS Safari
-  display: inherit;
-  align-items: inherit;
-  justify-content: inherit;
+	display: inherit;
+	align-items: inherit;
+	justify-content: inherit;
+	width: 100%; // assure the correct width for iOS Safari
 }
