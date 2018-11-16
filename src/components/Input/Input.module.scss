@@ -1,0 +1,62 @@
+@import '../styles/colors.module';
+
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='url']:focus,
+input[type='password']:focus,
+input[type='search']:focus,
+input[type='number']:focus,
+input[type='tel']:focus,
+input[type='range']:focus,
+input[type='date']:focus,
+input[type='month']:focus,
+input[type='week']:focus,
+input[type='time']:focus,
+input[type='datetime']:focus,
+input[type='datetime-local']:focus,
+input[type='color']:focus,
+textarea:focus {
+	color: $color--body;
+}
+
+textarea {
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	border: none;
+	outline: none;
+	background: transparent;
+	font: inherit;
+	line-height: inherit;
+	resize: none;
+	cursor: inherit;
+}
+
+.input {
+	display: block;
+	margin: 0;
+	padding: 12px 24px;
+	border: none;
+	border-radius: 0;
+	outline: 0;
+	background-color: darken($color--tertiary, 3%);
+	box-shadow: none;
+	color: $color--body-alt;
+	-webkit-appearance: textfield;
+	line-height: 24px;
+	resize: vertical;
+
+	&:invalid {
+		box-shadow: none;
+	}
+
+	&::placeholder {
+		opacity: 1;
+		color: color--code;
+	}
+}
+
+.fullWidth {
+	width: 100%;
+}
