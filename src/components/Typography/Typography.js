@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
+import { capitalize } from '../utils/helpers'
 import styles from './Typography.module.scss'
 
 const defaultHeadlineMapping = {
@@ -10,6 +11,7 @@ const defaultHeadlineMapping = {
 	h4: 'h4',
 	h5: 'h5',
 	h6: 'h6',
+	cite: 'cite',
 	subtitle1: 'h6',
 	subtitle2: 'h6',
 	body1: 'p',
@@ -22,13 +24,20 @@ const Typography = props => {
 		children,
 		className: classNameProp,
 		variant,
+		color,
 		component: componentProp,
 		paragraph,
 		headlineMapping,
 		...other
 	} = props
 
-	const className = classnames(styles[variant], classNameProp)
+	const className = classnames(
+		styles[variant],
+		{
+			[styles[`color${capitalize(color)}`]]: color !== 'default',
+		},
+		classNameProp,
+	)
 
 	const Component =
 		componentProp ||
@@ -53,6 +62,7 @@ Typography.propTypes = {
 		PropTypes.func,
 		PropTypes.object,
 	]),
+	color: PropTypes.oneOf(['default', 'primary', 'secondary', 'white']),
 	paragraph: PropTypes.bool,
 	variant: PropTypes.oneOf([
 		'display1',
@@ -73,6 +83,7 @@ Typography.defaultProps = {
 	headlineMapping: defaultHeadlineMapping,
 	paragraph: false,
 	variant: 'h5',
+	color: 'default',
 }
 
 export default Typography

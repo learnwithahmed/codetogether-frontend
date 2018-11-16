@@ -3,24 +3,24 @@
 /* Styles applied to the root element if `variant="display4"`. */
 
 .display1 {
-	font-weight: 700;
+	margin-top: 0;
 	font-family: $font-family--display;
 	font-size: 42px;
-	line-height: 48px;
+	font-weight: 700;
 	letter-spacing: -0.02em;
-	margin-top: 0;
+	line-height: 48px;
 
 	@media (min-width: $break-point--lg) {
 		font-size: 112px;
-		line-height: 120px;
 		letter-spacing: -0.04em;
+		line-height: 120px;
 	}
 }
 
 .h1 {
 	font-size: 42px;
-	line-height: 48px;
 	letter-spacing: -0.02em;
+	line-height: 48px;
 	// margin-top: 0;
 
 	@media (min-width: $break-point--lg) {
@@ -46,42 +46,69 @@
 }
 
 .h4 {
+	margin: 0 0 16px;
 	font-size: 24px;
 	line-height: 24px;
-	margin: 0 0 16px;
 }
 
 .h5 {
-	font-size: 20px;
-	line-height: 24px;
-	letter-spacing: 0.02em;
 	margin-top: 0;
+	font-size: 20px;
+	letter-spacing: 0.02em;
+	line-height: 24px;
 }
 
 .h6 {
+	margin-top: 0;
 	font-size: 16px;
 	line-height: 24px;
-	margin-top: 0;
 }
-.subtitle1 {
+
+.subtitle1,
+.cite {
+	margin-top: 0;
 	font-family: $font-family--body;
 	font-size: 12px;
 	font-style: normal;
 	font-weight: 700;
-	line-height: 24px;
 	letter-spacing: 0.2em;
+	line-height: 24px;
 	text-transform: uppercase;
-	margin-top: 0;
+
 	a {
 		color: inherit;
 	}
 }
+
+.cite {
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	margin: 0;
+	padding-left: 48px;
+	line-height: 24px;
+
+	&::before,
+	&::after {
+		content: '';
+		display: block;
+		position: absolute;
+		z-index: -1;
+		top: 11px;
+		left: 0;
+		width: 24px;
+		height: 2px;
+		background-color: $color--body;
+		pointer-events: none;
+	}
+}
+
 .subtitle2 {
-	font-size: 11px;
-	text-transform: uppercase;
-	letter-spacing: 0.04em;
-	color: $color--body-alt;
 	margin-top: 0;
+	color: $color--body-alt;
+	font-size: 11px;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
 
 	a:not(:hover) {
 		color: inherit;
@@ -91,11 +118,25 @@
 .body1 {
 	font-weight: normal;
 }
+
 .body2 {
 	font-weight: 700;
 }
+
 .body3 {
+	color: $color--body-alt;
 	font-size: 14px;
 	font-weight: normal;
-	color: $color--body-alt;
+}
+
+.colorPrimary {
+	color: $color--primary;
+}
+
+.colorSecondary {
+	color: $color--secondary;
+}
+
+.colorWhite {
+	color: $color--body-lighten;
 }

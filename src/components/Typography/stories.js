@@ -20,6 +20,9 @@ export const Default = () => (
 		<Typography variant="h4">Bold 24px</Typography>
 		<Typography variant="h5">Bold 20px</Typography>
 		<Typography variant="h6">Bold 16px</Typography>
+		<Typography variant="cite">
+			CITE 12PX. Lorem ipsum dolor sit amet
+		</Typography>
 		<Typography variant="subtitle1">
 			BOLD 12PX. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 			Quos blanditiis tenetur
