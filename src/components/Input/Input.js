@@ -1,12 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-// import debounce from 'lodash.debounce'
+import debounce from 'lodash.debounce'
 import classnames from 'classnames'
 import styles from './Input.module.scss'
 
-function debounce() {
-	console.log('hi')
-}
 class Input extends React.Component {
 	constructor(props) {
 		super(props)
