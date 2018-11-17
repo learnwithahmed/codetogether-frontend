@@ -1,31 +1,31 @@
 @import '../styles/all.module';
 
 .root {
-	position: absolute;
 	display: block;
+	position: absolute;
+	z-index: 1;
 	top: 0;
-	left: 0;
 	right: 0;
 	bottom: 1px;
+	left: 0;
 	opacity: 0.02;
-	z-index: 1;
 
-	&:after {
+	&::after {
 		content: '';
 		display: block;
 		height: 100%;
-		background-color: #222;
-		transform-origin: right center;
 		transform: scaleX(0);
+		transform-origin: right center;
 		transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+		background-color: #222;
 		will-change: transform;
 		mix-blend-mode: overlay;
 	}
 
 	@media (min-width: $break-point--md) {
-		&:hover:after {
-			transform-origin: left center;
+		&:hover::after {
 			transform: scale(1);
+			transform-origin: left center;
 		}
 	}
 }

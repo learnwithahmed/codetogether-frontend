@@ -23,8 +23,8 @@ textarea {
 
 body {
 	margin: 0;
-	background-color: $color--body-background;
 	overflow-x: hidden;
+	background-color: $color--body-background;
 }
 
 figure {
@@ -32,8 +32,8 @@ figure {
 }
 
 img {
-	height: auto;
 	max-width: 100%;
+	height: auto;
 }
 
 body,
@@ -44,10 +44,10 @@ textarea {
 	color: $color--body;
 	font-family: $font-family--body;
 	font-size: 16px;
-	font-weight: 400;
-	line-height: 24px;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	font-weight: 400;
+	line-height: 24px;
 }
 
 textarea {
@@ -60,10 +60,10 @@ h3,
 h4,
 h5,
 h6 {
-	clear: both;
-	font-weight: 700;
-	font-family: $font-family--display;
 	margin: 36px 0 12px;
+	clear: both;
+	font-family: $font-family--display;
+	font-weight: 700;
 
 	span {
 		display: inline-block;
@@ -71,28 +71,28 @@ h6 {
 }
 
 a {
+	transition: color 0.4s 0.1s ease-out;
 	color: $color--link;
 	text-decoration: none;
-	transition: color 0.4s 0.1s ease-out;
 }
 
 a:hover,
 a:focus {
-	color: $color--link-hover;
 	outline: 0;
+	color: $color--link-hover;
 }
 
 p {
 	margin: 0 0 24px;
 	padding: 0;
 
-	&.has-drop-cap:not(:focus):first-letter {
+	&.has-drop-cap:not(:focus)::first-letter {
+		margin: 6px 6px 0 0;
 		float: left;
 		font-size: 48px;
-		line-height: 42px;
-		margin: 6px 6px 0 0;
-		text-transform: uppercase;
 		font-style: normal;
 		font-weight: 700;
+		line-height: 42px;
+		text-transform: uppercase;
 	}
 }

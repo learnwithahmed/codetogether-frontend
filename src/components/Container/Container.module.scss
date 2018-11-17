@@ -2,10 +2,10 @@
 
 .root {
 	width: 100%;
-	padding-right: 15px;
-	padding-left: 15px;
 	margin-right: auto;
 	margin-left: auto;
+	padding-right: 15px;
+	padding-left: 15px;
 
 	@media (min-width: $break-point--sm) {
 		max-width: 540px;

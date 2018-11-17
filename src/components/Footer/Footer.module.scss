@@ -2,13 +2,11 @@
 
 /*  Footer */
 .root {
-	a:not(:hover) {
-		color: inherit;
-	}
-}
+	padding-top: 72px;
+	padding-bottom: 72px;
+	background-color: $color--dark-background;
 
-.siteInfo {
-	padding-top: 24px;
-	padding-bottom: 24px;
-	background-color: $color--body-background;
+	a:not(:hover) {
+		color: $color--link;
+	}
 }

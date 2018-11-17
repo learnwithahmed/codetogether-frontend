@@ -14,7 +14,7 @@
 		"max-empty-lines": 4,
 		"max-nesting-depth": 3,
 		"no-descending-specificity": null,
-		"number-leading-zero": "never",
+		"number-leading-zero": "always",
 		"string-quotes": "single",
 		"value-list-comma-newline-after": null
 	}
