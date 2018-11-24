@@ -32,8 +32,7 @@ export const Tabs = ({
 			return null
 		}
 
-		const childValue =
-			child.props.value === undefined ? childIndex : child.props.value
+		const childValue = child.props.value === undefined ? childIndex : child.props.value
 		const selected = childValue === value
 
 		childIndex += 1

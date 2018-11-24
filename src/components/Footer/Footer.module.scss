@@ -1,7 +1,8 @@
-@import '../styles/colors.module';
+@import '../styles/partials/colors.module';
 
 /*  Footer */
 .root {
+	flex-shrink: 0;
 	padding-top: 72px;
 	padding-bottom: 72px;
 	background-color: $color--dark-background;

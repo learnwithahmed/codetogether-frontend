@@ -4,8 +4,6 @@ import Input from './'
 
 storiesOf('1. Components/Input', module)
 	.add('default', () => <Input onChange={action('onChange')} />)
-	.add('debounced', () => (
-		<Input debouncedOnChange={action('debouncedOnChange')} />
-	))
+	.add('debounced', () => <Input debouncedOnChange={action('debouncedOnChange')} />)
 	.add('disabled', () => <Input disabled value="I'm disabled" />)
 	.add('textarea', () => <Input component={<textarea />} />)

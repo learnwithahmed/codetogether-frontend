@@ -8,14 +8,7 @@ import ButtonBase from '../ButtonBase'
 import styles from './Button.module.scss'
 
 const Button = props => {
-	const {
-		children,
-		className: classNameProp,
-		color,
-		fullWidth,
-		size,
-		...other
-	} = props
+	const { children, className: classNameProp, color, fullWidth, size, ...other } = props
 
 	const className = classnames(
 		styles.root,
@@ -51,11 +44,7 @@ Button.propTypes = {
 	 * The component used for the root node.
 	 * Either a string to use a DOM element or a component.
 	 */
-	component: PropTypes.oneOfType([
-		PropTypes.string,
-		PropTypes.func,
-		PropTypes.object,
-	]),
+	component: PropTypes.oneOfType([PropTypes.string, PropTypes.func, PropTypes.object]),
 	/**
 	 * The URL to link to when the button is clicked.
 	 * If defined, an `a` element will be used as the root node.

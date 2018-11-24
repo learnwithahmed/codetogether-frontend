@@ -1,4 +1,4 @@
-@import '../styles/all.module';
+@import '../styles/partials/mixins.module';
 
 .root {
 	width: 100%;
@@ -7,16 +7,19 @@
 	padding-right: 15px;
 	padding-left: 15px;
 
-	@media (min-width: $break-point--sm) {
-		max-width: 540px;
+	@include up(sm) {
+		max-width: 768px;
 	}
-	@media (min-width: $break-point--md) {
-		max-width: 720px;
+
+	@include up(md) {
+		max-width: 992px;
 	}
-	@media (min-width: $break-point--lg) {
-		max-width: 960px;
+
+	@include up(lg) {
+		max-width: 1200px;
 	}
-	@media (min-width: $break-point--xl) {
-		max-width: 1140px;
+
+	@include up(xl) {
+		max-width: 1920px;
 	}
 }

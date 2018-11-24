@@ -38,8 +38,7 @@ class Tab extends React.Component {
 		const className = classnames(
 			styles.root,
 			{
-				[styles[`indicator${capitalize(indicatorColor)}`]]:
-					indicatorColor !== 'default',
+				[styles[`indicator${capitalize(indicatorColor)}`]]: indicatorColor !== 'default',
 				[styles.disabled]: disabled,
 				[styles.selected]: selected,
 				[styles.fullWidth]: fullWidth,

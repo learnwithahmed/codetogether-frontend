@@ -22,13 +22,9 @@ const Burger = props => {
 			)}
 			{...other}
 		>
-			<BurgerIcon
-				className={classnames(styles.icon, styles.burgerIcon)}
-			/>
+			<BurgerIcon className={classnames(styles.icon, styles.burgerIcon)} />
 			<CrossIcon className={classnames(styles.icon, styles.crossIcon)} />
-			<ArrowLeftIcon
-				className={classnames(styles.icon, styles.backIcon)}
-			/>
+			<ArrowLeftIcon className={classnames(styles.icon, styles.backIcon)} />
 		</div>
 	)
 }

@@ -14,8 +14,7 @@ export const Default = () => (
 			<Grid container>
 				<Grid xs={12} md={6} xl={12}>
 					<ButtonBase component="a" madeWithLove>
-						Made With <Heart style={{ fill: 'ff00bf' }} /> by
-						CodeTogether
+						Made With <Heart style={{ fill: 'ff00bf' }} /> by CodeTogether
 					</ButtonBase>
 				</Grid>
 			</Grid>

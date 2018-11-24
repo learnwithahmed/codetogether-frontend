@@ -7,15 +7,7 @@ import styles from './Media.module.scss'
 const MEDIA_COMPONENTS = ['video', 'audio', 'picture', 'iframe', 'img']
 
 const Media = props => {
-	const {
-		alt,
-		className,
-		component: Component,
-		image,
-		src: srcProp,
-		style,
-		...other
-	} = props
+	const { alt, className, component: Component, image, src: srcProp, style, ...other } = props
 
 	const isImgComponent = Component === 'img'
 	const isPictureComponent = Component === 'picture'
@@ -31,9 +23,7 @@ const Media = props => {
 	}
 
 	const composedStyle =
-		!isMediaComponent && src
-			? { backgroundImage: `url("${src}")`, ...style }
-			: style
+		!isMediaComponent && src ? { backgroundImage: `url("${src}")`, ...style } : style
 
 	return (
 		<Component
@@ -56,11 +46,7 @@ const Media = props => {
 Media.propTypes = {
 	alt: PropTypes.string,
 	className: PropTypes.string,
-	component: PropTypes.oneOfType([
-		PropTypes.string,
-		PropTypes.func,
-		PropTypes.object,
-	]),
+	component: PropTypes.oneOfType([PropTypes.string, PropTypes.func, PropTypes.object]),
 	image: PropTypes.string,
 	src: PropTypes.oneOfType([
 		PropTypes.string,

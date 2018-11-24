@@ -1,4 +1,4 @@
-@import '../styles/all.module';
+@import '../styles/partials/mixins.module';
 
 .root {
 	display: block;
@@ -22,7 +22,7 @@
 		mix-blend-mode: overlay;
 	}
 
-	@media (min-width: $break-point--md) {
+	@include up(md) {
 		&:hover::after {
 			transform: scale(1);
 			transform-origin: left center;

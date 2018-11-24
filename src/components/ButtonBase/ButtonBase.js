@@ -39,12 +39,7 @@ const ButtonBase = props => {
 	}
 
 	return (
-		<Component
-			className={className}
-			ref={innerRef}
-			{...other}
-			{...buttonProps}
-		>
+		<Component className={className} ref={innerRef} {...other} {...buttonProps}>
 			{children}
 		</Component>
 	)
@@ -53,11 +48,7 @@ const ButtonBase = props => {
 ButtonBase.propTypes = {
 	children: PropTypes.node,
 	className: PropTypes.string,
-	component: PropTypes.oneOfType([
-		PropTypes.string,
-		PropTypes.func,
-		PropTypes.object,
-	]),
+	component: PropTypes.oneOfType([PropTypes.string, PropTypes.func, PropTypes.object]),
 	disabled: PropTypes.bool,
 	madeWithLove: PropTypes.bool,
 	innerRef: PropTypes.func,

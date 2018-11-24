@@ -6,9 +6,9 @@ import styles from './Section.module.scss'
 const Section = props => {
 	const { children, className, ...other } = props
 	return (
-		<div className={classnames(styles.root, className)} {...other}>
+		<section className={classnames(styles.root, className)} {...other}>
 			{children}
-		</div>
+		</section>
 	)
 }
 

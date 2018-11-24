@@ -1,4 +1,4 @@
-@import '../styles/all.module';
+@import '../styles/partials/mixins.module';
 
 .root {
 	position: relative;
@@ -15,7 +15,7 @@
 		opacity: 0.1;
 	}
 
-	@media (min-width: $break-point--md) {
+	@include up(md) {
 		padding-right: 12px;
 		padding-left: 12px;
 	}

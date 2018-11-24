@@ -4,11 +4,7 @@ import classnames from 'classnames'
 import styles from './List.module.scss'
 
 export const List = ({ className, innerRef, children, ...other }) => (
-	<ul
-		className={classnames(styles.root, className)}
-		ref={innerRef}
-		{...other}
-	>
+	<ul className={classnames(styles.root, className)} ref={innerRef} {...other}>
 		{React.Children.map(children, child => (
 			<li>{child}</li>
 		))}

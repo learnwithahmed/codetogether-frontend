@@ -6,13 +6,7 @@ import styles from './ClipCardLink.module.scss'
 
 const ClipCardLink = props => {
 	const { children, className, ...other } = props
-	return (
-		<ButtonBase
-			component="a"
-			className={classnames(styles.root, className)}
-			{...other}
-		/>
-	)
+	return <ButtonBase component="a" className={classnames(styles.root, className)} {...other} />
 }
 
 ClipCardLink.propTypes = {

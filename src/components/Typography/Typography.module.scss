@@ -1,5 +1,6 @@
-@import '../styles/all.module';
-@import '../styles/colors.module';
+@import '../styles/partials/mixins.module';
+@import '../styles/partials/colors.module';
+@import '../styles/partials/settings.module';
 
 /* Styles applied to the root element if `variant="display4"`. */
 
@@ -11,7 +12,7 @@
 	letter-spacing: -0.02em;
 	line-height: 48px;
 
-	@media (min-width: $break-point--lg) {
+	@include up(lg) {
 		font-size: 112px;
 		letter-spacing: -0.04em;
 		line-height: 120px;
@@ -24,7 +25,7 @@
 	line-height: 48px;
 	// margin-top: 0;
 
-	@media (min-width: $break-point--lg) {
+	@include down(lg) {
 		font-size: 56px;
 		line-height: 72px;
 	}
@@ -35,7 +36,7 @@
 	line-height: 48px;
 	// margin-top: 0;
 
-	@media (min-width: $break-point--lg) {
+	@include down(lg) {
 		font-size: 45px;
 	}
 }

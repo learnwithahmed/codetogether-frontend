@@ -4,13 +4,7 @@ import classNames from 'classnames'
 import styles from './Toolbar.module.scss'
 
 const Toolbar = props => {
-	const {
-		children,
-		className: classNameProp,
-		disableGutters,
-		variant,
-		...other
-	} = props
+	const { children, className: classNameProp, disableGutters, variant, ...other } = props
 
 	const className = classNames(
 		styles.root,

@@ -8,11 +8,7 @@ const AppBarMenu = props => {
 	const {
 		children,
 		className,
-		ListProps: {
-			className: ListPropsClassName,
-			isMobile,
-			...ListPropsProp
-		} = {},
+		ListProps: { className: ListPropsClassName, isMobile, ...ListPropsProp } = {},
 		...other
 	} = props
 	return (

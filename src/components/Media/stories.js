@@ -11,10 +11,11 @@ const sources = {
 	md: '//placekitten.com/g/500/500',
 }
 // Demo videos
-const sources2 = {
-	xs: 'https://storage.googleapis.com/coverr-main/mp4/Bath-time.mp4',
-	sm: 'https://staging.coverr.co/s3/mp4/clothing.mp4',
-}
+// const sources2 = {
+// 	xs: 'https://storage.googleapis.com/coverr-main/mp4/Bath-time.mp4',
+// 	sm: 'https://staging.coverr.co/s3/mp4/clothing.mp4',
+// }
+
 export const Default = () => (
 	<Media
 		component={select(
@@ -22,7 +23,7 @@ export const Default = () => (
 			['audio', 'div', 'iframe', 'img', 'picture', 'video'],
 			'div',
 		)}
-		src={sources2}
+		src={sources}
 		alt={text('alt', 'Just another img alt attribute')}
 		style={{ minHeight: 100 }}
 	/>

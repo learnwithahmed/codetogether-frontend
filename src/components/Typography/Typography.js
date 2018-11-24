@@ -41,9 +41,7 @@ const Typography = props => {
 
 	const Component =
 		componentProp ||
-		(paragraph
-			? 'p'
-			: headlineMapping[variant] || defaultHeadlineMapping[variant]) ||
+		(paragraph ? 'p' : headlineMapping[variant] || defaultHeadlineMapping[variant]) ||
 		'span'
 
 	return (
@@ -57,11 +55,7 @@ Typography.propTypes = {
 	children: PropTypes.node,
 	className: PropTypes.string,
 	headlineMapping: PropTypes.object,
-	component: PropTypes.oneOfType([
-		PropTypes.string,
-		PropTypes.func,
-		PropTypes.object,
-	]),
+	component: PropTypes.oneOfType([PropTypes.string, PropTypes.func, PropTypes.object]),
 	color: PropTypes.oneOf(['default', 'primary', 'secondary', 'white']),
 	paragraph: PropTypes.bool,
 	variant: PropTypes.oneOf([
@@ -72,6 +66,7 @@ Typography.propTypes = {
 		'h4',
 		'h5',
 		'h6',
+		'cite',
 		'subtitle1',
 		'subtitle2',
 		'body1',
