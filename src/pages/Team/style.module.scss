@@ -1,0 +1,13 @@
+@import '../../components/styles/partials/mixins.module';
+
+$unit: 60;
+
+.child {
+	margin-bottom: 30px;
+
+	@include up(md) {
+		&:nth-child(3n + 2) {
+			transform: translateY($unit + px);
+		}
+	}
+}
