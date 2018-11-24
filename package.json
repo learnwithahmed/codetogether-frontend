@@ -10,6 +10,7 @@
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-event-listener": "^0.6.4",
+    "react-media": "^1.8.0",
     "react-scripts": "2.0.4"
   },
   "scripts": {
