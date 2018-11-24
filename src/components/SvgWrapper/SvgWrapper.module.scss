@@ -1,35 +1,37 @@
 .root {
-  user-select: none;
-  width: 1em;
-  height: 1em;
-  display: inline-block;
-  fill: currentColor;
-  flex-shrink: 0;
-  font-size: 24px;
+	display: inline-block;
+	flex-shrink: 0;
+	width: 1em;
+	height: 1em;
+	fill: currentColor;
+	font-size: 24px;
+	user-select: none;
 }
 
 .colorPrimary {
-  color: pink;
+	color: pink;
 }
 
 .colorSecondary {
-  color: palegreen;
+	color: palegreen;
 }
+
 .colorError {
-  color: purple;
+	color: purple;
 }
+
 .colorDisabled {
-  color: darkgrey;
+	color: darkgrey;
 }
 
 .fontSizeInherit {
-  font-size: inherit;
+	font-size: inherit;
 }
 
 .fontSizeSmall {
-  font-size: 20px;
+	font-size: 20px;
 }
 
 .fontSizeLarge {
-  font-size: 36px;
+	font-size: 36px;
 }

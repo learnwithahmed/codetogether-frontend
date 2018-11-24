@@ -1,5 +1,5 @@
 .root {
-	&:before {
+	&::before {
 		content: '';
 		display: block;
 		margin-bottom: 14px;
