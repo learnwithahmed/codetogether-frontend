@@ -38,6 +38,7 @@ class AppBase extends React.Component {
 				<div style={{ minHeight: 120 }} />
 
 				<AppBar
+					transparent
 					appBarRef={ref => {
 						this.headerRef = ref
 					}}

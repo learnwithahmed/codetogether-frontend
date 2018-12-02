@@ -20,14 +20,10 @@ export const createKnobs = () => ({
 
 export const Default = () => (
 	<div style={{ height: '100vh', background: '#eee' }}>
-		<AppBar {...createKnobs()} style={{ background: '#fff' }}>
+		<AppBar transparent {...createKnobs()} style={{ background: '#fff' }}>
 			<Toolbar>
 				<Container>
-					<Grid
-						container
-						alignItems="center"
-						style={{ minHeight: 68 }}
-					>
+					<Grid container alignItems="center" style={{ minHeight: 68 }}>
 						<Grid xs={10} md={2}>
 							<IconButton>CodeTogether</IconButton>
 						</Grid>

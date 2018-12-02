@@ -7,6 +7,7 @@
 	width: 100%;
 	transition: transform 0.25s ease-in-out;
 	will-change: transform;
+	box-shadow: 1px 3px 10px rgba(12, 12, 12, 0.08);
 }
 
 .positionFixed {
@@ -29,4 +30,8 @@
 
 .positionStatic {
 	position: static;
+}
+
+.transparent {
+	box-shadow: none;
 }

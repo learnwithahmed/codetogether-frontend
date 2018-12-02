@@ -42,17 +42,8 @@ class AppBar extends React.Component {
 			classNameProps,
 		)
 		return (
-			<header
-				className={classnames(styles.root, className)}
-				ref={appBarRef}
-				{...other}
-			>
-				{transparent && (
-					<EventListener
-						target="window"
-						onScroll={this.handleScroll}
-					/>
-				)}
+			<header className={classnames(styles.root, className)} ref={appBarRef} {...other}>
+				{transparent && <EventListener target="window" onScroll={this.handleScroll} />}
 				{children}
 			</header>
 		)
