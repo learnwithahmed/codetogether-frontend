@@ -23,7 +23,6 @@
 	font-size: 42px;
 	letter-spacing: -0.02em;
 	line-height: 48px;
-	// margin-top: 0;
 
 	@include up(md) {
 		font-size: 56px;
@@ -34,7 +33,6 @@
 .h2 {
 	font-size: 38px;
 	line-height: 48px;
-	// margin-top: 0;
 
 	@include up(md) {
 		font-size: 45px;
@@ -44,7 +42,6 @@
 .h3 {
 	font-size: 34px;
 	line-height: 48px;
-	// margin-top: 0;
 }
 
 .h4 {
@@ -54,7 +51,6 @@
 }
 
 .h5 {
-	margin-top: 0;
 	font-size: 20px;
 	letter-spacing: 0.02em;
 	line-height: 24px;
