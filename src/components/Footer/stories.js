@@ -17,8 +17,8 @@ export const Default = () => (
 						Contact
 					</Typography>
 					<List>
-						<a href="#Twitter">info@ct.com</a>
-						<a href="#Facebook">Be a sponsor</a>
+						<a href="mailto:info@codetogether.network">hello@codetogether</a>
+						<a href="#">Be a sponsor</a>
 					</List>
 				</Grid>
 				<Grid xs={12} md={4} xl={2}>

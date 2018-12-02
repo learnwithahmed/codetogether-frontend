@@ -86,14 +86,14 @@ h6 {
 
 a {
 	transition: color 0.4s 0.1s ease-out;
-	color: $color--link;
+	color: $color--primary;
 	text-decoration: none;
 }
 
 a:hover,
 a:focus {
 	outline: 0;
-	color: $color--link-hover;
+	color: $color--secondary;
 }
 
 p {
