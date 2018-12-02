@@ -3,7 +3,7 @@
 $unit: 60;
 
 .child {
-	margin-bottom: 30px;
+	margin-bottom: 100px;
 
 	@include up(md) {
 		&:nth-child(3n + 2) {
