@@ -12,7 +12,7 @@
 	letter-spacing: -0.02em;
 	line-height: 48px;
 
-	@include up(lg) {
+	@include up(md) {
 		font-size: 112px;
 		letter-spacing: -0.04em;
 		line-height: 120px;
@@ -25,7 +25,7 @@
 	line-height: 48px;
 	// margin-top: 0;
 
-	@include down(lg) {
+	@include up(md) {
 		font-size: 56px;
 		line-height: 72px;
 	}
@@ -36,7 +36,7 @@
 	line-height: 48px;
 	// margin-top: 0;
 
-	@include down(lg) {
+	@include up(md) {
 		font-size: 45px;
 	}
 }
@@ -108,9 +108,10 @@
 .subtitle2 {
 	margin-top: 0;
 	color: $color--body-alt;
-	font-size: 11px;
+	// font-size: 11px;
+	font-weight: normal;
 	letter-spacing: 0.04em;
-	text-transform: uppercase;
+	// text-transform: uppercase;
 
 	a:not(:hover) {
 		color: inherit;
