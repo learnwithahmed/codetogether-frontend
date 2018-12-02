@@ -91,10 +91,16 @@ class CountDown extends React.Component {
 						<Grid container>
 							<Grid xs={12}>
 								<PageHeader>
-									<Typography variant="h5">Join Us</Typography>
-									<Typography variant="h1">
-										Sharing thoughts & experiences about design, development,
-										and creating coding content
+									<Typography variant="h1">Join Us</Typography>
+									<Typography
+										variant="body1"
+										style={{
+											fontSize: 24,
+											lineHeight: '36px',
+										}}
+									>
+										Sharing thoughts &amp; experiences about design,
+										development, and creating coding content
 									</Typography>
 								</PageHeader>
 							</Grid>
