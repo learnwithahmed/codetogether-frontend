@@ -30,6 +30,17 @@
 		"not ie <= 11",
 		"not op_mini all"
 	],
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"src/**/*.scss": [
+			"stylelint --fix",
+			"git add"
+		]
+	},
 	"devDependencies": {
 		"@storybook/addon-actions": "^3.4.11",
 		"@storybook/addon-knobs": "^3.4.11",
@@ -42,6 +53,8 @@
 		"css-loader": "^1.0.0",
 		"eslint-config-prettier": "^3.1.0",
 		"eslint-plugin-prettier": "^3.0.0",
+		"husky": "^1.2.1",
+		"lint-staged": "^8.1.0",
 		"prettier": "^1.14.3",
 		"sass-loader": "^7.1.0",
 		"style-loader": "^0.23.0",
