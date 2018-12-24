@@ -4,9 +4,19 @@ import classnames from 'classnames'
 import styles from './Section.module.scss'
 
 const Section = props => {
-	const { children, className, ...other } = props
+	const { children, className, first, disableBottomGutter, ...other } = props
 	return (
-		<section className={classnames(styles.root, className)} {...other}>
+		<section
+			className={classnames(
+				styles.root,
+				{
+					[styles.first]: first,
+					[styles.disableBottomGutter]: disableBottomGutter,
+				},
+				className,
+			)}
+			{...other}
+		>
 			{children}
 		</section>
 	)

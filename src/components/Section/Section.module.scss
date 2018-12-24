@@ -2,4 +2,12 @@
 	position: relative;
 	padding-top: 84px;
 	padding-bottom: 84px;
+
+	&.first {
+		padding-top: 168px;
+	}
+
+	&.disableBottomGutter {
+		padding-bottom: 0;
+	}
 }
