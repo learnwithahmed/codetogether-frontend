@@ -10,6 +10,8 @@ export const Default = () => (
 		<Svg.Burger />
 		<Svg.Cross />
 		<Svg.Heart />
+		<Svg.Mind />
+		<Svg.Dislike />
 	</div>
 )
 
