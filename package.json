@@ -19,7 +19,7 @@
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"storybook": "start-storybook -p 9009 -s public",
-		"build-storybook": "build-storybook -o .codetogether-styleguide && cp -r static/* .codetogether-styleguide/_static"
+		"build-storybook": "build-storybook -o .codetogether-styleguide && cp -r public/static/* .codetogether-styleguide/_static"
 	},
 	"eslintConfig": {
 		"extends": "react-app"
