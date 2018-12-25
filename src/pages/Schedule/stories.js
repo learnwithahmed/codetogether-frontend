@@ -43,9 +43,27 @@ class Schedule extends React.Component {
 									indicatorColor="primary"
 									onChange={(e, value) => this.handleTabPanel(value)}
 								>
-									<Tab>Day 1</Tab>
-									<Tab>Day 2</Tab>
-									<Tab>Day 3</Tab>
+									<Tab>
+										DAY ONE
+										<Typography component="span" variant="subtitle2">
+											{' '}
+											— 25 DEC
+										</Typography>
+									</Tab>
+									<Tab>
+										DAY TWO
+										<Typography component="span" variant="subtitle2">
+											{' '}
+											— 26 DEC
+										</Typography>
+									</Tab>
+									<Tab>
+										DAY THREE
+										<Typography component="span" variant="subtitle2">
+											{' '}
+											— 27 DEC
+										</Typography>
+									</Tab>
 								</Tabs>
 								{value === 0 && (
 									<TabPanel>
@@ -62,7 +80,7 @@ class Schedule extends React.Component {
 														marginBottom: 0,
 													}}
 												>
-													16:30
+													16:30 PM
 												</Typography>
 											</Grid>
 											<Grid xs={12} md={10} lg={11}>
@@ -71,15 +89,25 @@ class Schedule extends React.Component {
 													<Typography
 														component="span"
 														variant="subtitle2"
+														style={{
+															fontSize: 11,
+															textTransform: 'uppercase',
+														}}
 													>
 														Online Workshop — 2 Hours
 													</Typography>
 													<Typography variant="h6">
-														Into to Docker Fundamental
+														Introduction to Docker and learn how to
+														setup your application for easier
+														development
 													</Typography>
 													<Typography
 														component="span"
 														variant="subtitle2"
+														style={{
+															fontSize: 11,
+															textTransform: 'uppercase',
+														}}
 													>
 														By Ahmed Abdulrahman
 													</Typography>
