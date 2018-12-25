@@ -35,17 +35,14 @@ class AppBase extends React.Component {
 
 		return (
 			<React.Fragment>
-				<div style={{ minHeight: 120 }} />
-
 				<AppBar
 					transparent
 					appBarRef={ref => {
 						this.headerRef = ref
 					}}
-					style={{ background: '#fff' }}
 				>
 					{/* Desktop Toolbar */}
-					<Toolbar variant="default">
+					<Toolbar variant="default" disableGutters>
 						<Container>
 							<Grid container alignItems="center">
 								<Grid xs={11} md={2} lg={2}>
@@ -64,14 +61,18 @@ class AppBase extends React.Component {
 													}}
 												>
 													<AppBarMenu>
-														<a href="#">About</a>
 														<a href="#">Schedule</a>
 														<a href="#">Team</a>
+														<a href="#">Blog</a>
 														<a href="#">Get in Touch</a>
 													</AppBarMenu>
 												</Grid>
 
-												<Grid md={1} lg={1} style={{ paddingLeft: 20 }}>
+												<Grid
+													md={1}
+													lg={1}
+													style={{ padding: '12px 0 12px 48px' }}
+												>
 													<Button color="primary">Signup</Button>
 												</Grid>
 											</React.Fragment>
