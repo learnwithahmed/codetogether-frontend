@@ -1,0 +1,136 @@
+@import '../../components/styles/partials/mixins.module';
+@import '../../components/styles/partials/colors.module';
+
+.paperGooey {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 50%;
+	width: 100%;
+	max-width: 1920px;
+	height: 200%;
+	overflow: hidden;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+	will-change: opacity;
+}
+
+.reveal {
+	position: relative;
+	z-index: 1;
+	padding: 36px 10%;
+	overflow: hidden;
+
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $color--tertiary;
+	}
+
+	@include up(md) {
+		padding: 120px 48px;
+
+		&--left {
+			padding-left: 0;
+			overflow: visible;
+
+			&::before {
+				width: 2000px;
+				width: 100vw;
+			}
+		}
+
+		&--right {
+			padding-right: 0;
+			overflow: visible;
+
+			&::before {
+				right: auto;
+				left: 0;
+				width: 2000px;
+				width: 100vw;
+			}
+		}
+
+		&--left &__background {
+			width: 2000px;
+			width: 100vw;
+		}
+
+		&--right &__background {
+			right: auto;
+			left: 0;
+			width: 2000px;
+			width: 100vw;
+		}
+	}
+
+	&--darken {
+		color: $color--body-lighten;
+
+		&::before {
+			background-color: $color--body;
+		}
+
+		a,
+		p,
+		.sub-head,
+		a.sub-head {
+			color: inherit !important;
+		}
+
+		.dashed::before,
+		.dashed::after {
+			background-color: $color--body-lighten;
+		}
+
+		.dashed.dashed--hover:not(.dashed--vertical):hover::after,
+		a.dashed:not(.dashed--vertical):hover::after {
+			background-color: rgba($color--body-lighten, 0.3);
+		}
+	}
+
+	&--primary {
+		&::before {
+			background-color: $color--primary;
+		}
+	}
+
+	&--secondary {
+		&::before {
+			background-color: $color--secondary;
+		}
+	}
+
+	&__background {
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0.175;
+		background-attachment: fixed;
+		background-image: url('/static/images/placeholder-about.jpg');
+		background-position: center;
+		background-size: cover;
+	}
+
+	&__copy {
+		margin-bottom: 32px;
+		margin-left: 48px;
+
+		p {
+			width: 492px;
+			max-width: 100%;
+		}
+	}
+}
