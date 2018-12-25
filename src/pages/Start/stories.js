@@ -18,12 +18,7 @@ export const Default = () => (
 	<AppBaseStory>
 		<Section first>
 			<div className={styles.paperGooey}>
-				<Media
-					component="img"
-					src="./static/images/banner.svg"
-					width={1920}
-					height={1080}
-				/>
+				<Media component="img" src="/images/banner.svg" width={1920} height={1080} />
 			</div>
 			<Container>
 				<Grid container>
