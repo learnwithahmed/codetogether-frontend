@@ -7,19 +7,19 @@
 	padding-right: 15px;
 	padding-left: 15px;
 
+	@include up(xs) {
+		max-width: 540px;
+	}
+
 	@include up(sm) {
-		max-width: 768px;
+		max-width: 720px;
 	}
 
 	@include up(md) {
-		max-width: 992px;
+		max-width: 960px;
 	}
 
 	@include up(lg) {
-		max-width: 1200px;
-	}
-
-	@include up(xl) {
-		max-width: 1920px;
+		max-width: 1140px;
 	}
 }
