@@ -1,0 +1,96 @@
+@import '../../components/styles/partials/colors.module';
+
+.relative {
+	position: relative;
+	margin-bottom: 0;
+	overflow: hidden;
+	transition: box-shadow 300ms ease-in-out;
+	border-radius: 5px;
+
+	&:hover {
+		box-shadow: 0 20px 20px -9px rgba(26, 27, 31, 0.23);
+
+		&::after {
+			opacity: 0.8;
+		}
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		transition: opacity 200ms ease-in-out, background 200ms ease-in-out;
+		opacity: 0;
+		background: linear-gradient(to bottom, #05f 0%, #05f 100%);
+	}
+}
+
+.courseLink {
+	color: #1a1b1f;
+
+	&:hover {
+		color: #1a1b1f;
+	}
+}
+
+.playIcon {
+	display: block;
+	position: absolute;
+	z-index: 999;
+	top: 0%;
+	right: 0;
+	bottom: 0%;
+	left: 0;
+	width: 100px;
+	height: 100px;
+	margin: auto;
+	transform: translate3d(0, 0, 46px);
+	transform-style: preserve-3d;
+	border-radius: 9999px;
+	box-shadow: inset 0 0 0 2px #fff;
+}
+
+.courseTitle {
+	margin-top: 23px;
+	margin-bottom: -1px;
+	font-size: 22px;
+	line-height: 1.1;
+}
+
+.courseCount {
+	margin-top: 11px;
+	margin-bottom: 11px;
+	color: $color--primary;
+}
+
+.viewCourseWrapper {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	margin-top: auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	transition: padding 0.1s ease-in-out 0s;
+	font-size: 16px;
+	font-weight: 500;
+
+	&:hover {
+		.arrowRight {
+			transform: translateX(7px) translateY(0) translateZ(0);
+		}
+	}
+
+	h6 {
+		margin: 0;
+	}
+
+	.arrowRight {
+		margin-left: 13px;
+		transform: translateX(0) translateY(0) translateZ(0);
+		transform-style: preserve-3d;
+		transition: transform 200ms ease 0s;
+	}
+}
