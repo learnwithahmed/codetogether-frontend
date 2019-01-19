@@ -12,6 +12,7 @@ import AppBarMenu from '../../components/AppBarMenu'
 import SiteInfoStory from '../../components/SiteInfo/stories'
 import Burger from '../../components/Burger'
 import RootRef from '../../components/RootRef'
+import Logo from '../../components/icons/Logo'
 import styles from './styles.module.scss'
 
 const stories = storiesOf('2. Containers/AppBase', module)
@@ -46,7 +47,13 @@ class AppBase extends React.Component {
 						<Container>
 							<Grid container alignItems="center">
 								<Grid xs={11} md={2} lg={2}>
-									<IconButton>CodeTogether</IconButton>
+									<IconButton>
+										<Logo
+											style={{
+												fontSize: '5em',
+											}}
+										/>
+									</IconButton>
 								</Grid>
 
 								<Media query={{ minWidth: 992 }}>
