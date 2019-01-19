@@ -1,0 +1,10 @@
+.root {
+	display: flex;
+	position: relative;
+	padding: 20px 10px;
+	line-height: 1.5rem;
+
+	// &:not(:last-of-type) {
+	// 	border-bottom: 1px solid #efefef;
+	// }
+}
