@@ -1,0 +1,13 @@
+.root {
+	display: block;
+	position: relative;
+	overflow: hidden;
+
+	& > button,
+	& > a {
+		// Keep as `display: block` as element otherwise collapses to 0px in
+		// height in Edge 15/16.
+		display: block;
+		width: 100%;
+	}
+}
