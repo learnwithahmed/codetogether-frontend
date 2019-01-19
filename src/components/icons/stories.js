@@ -12,6 +12,8 @@ export const Default = () => (
 		<Svg.Heart />
 		<Svg.Mind />
 		<Svg.Dislike />
+		<Svg.PlayIcon />
+		<Svg.Logo />
 	</div>
 )
 
