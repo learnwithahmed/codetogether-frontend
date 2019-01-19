@@ -7,9 +7,9 @@
 	min-width: 64px;
 	min-height: 40px;
 	padding: 18px 32px;
-	transition: all 0.2s ease-in-out;
+	transition: box-shadow 200ms ease-in-out;
 	border: 0;
-	border-radius: 0;
+	border-radius: 4px;
 	box-shadow: 0 0 0 rgba($color--box-shadow, 0.1);
 	font-family: $font-family--body;
 	font-size: 12px;
@@ -34,7 +34,7 @@
 	}
 
 	&:hover {
-		box-shadow: 0 4px 16px rgba($color--box-shadow-hover, 0.25);
+		box-shadow: 0 10px 30px -2px $color--box-shadow-hover;
 		text-decoration: none;
 	}
 
