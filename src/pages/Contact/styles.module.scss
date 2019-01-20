@@ -1,0 +1,7 @@
+@import '../../components/styles/partials/mixins.module';
+
+.address {
+	@include down(md) {
+		margin-bottom: 40px;
+	}
+}

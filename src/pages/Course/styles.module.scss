@@ -1,10 +1,35 @@
 @import '../../components/styles/partials/colors.module';
+@import '../../components/styles/partials/mixins.module';
+
+.seriesMain {
+	@include down(md) {
+		order: 2;
+	}
+}
+
+.sidebarWrapper {
+	align-items: flex-start;
+
+	@include down(md) {
+		order: 1;
+	}
+}
+
+.sidebarSticky {
+	position: sticky;
+	top: 160px;
+	margin-top: -523px;
+
+	@include down(md) {
+		margin-top: -30px;
+	}
+}
 
 .seriesRequirmentList {
 	margin-top: 16px;
 	margin-bottom: 16px;
 	margin-left: 8px;
-	padding-left: 36px;
+	padding-left: 16px;
 
 	li {
 		margin-bottom: 4px;
@@ -53,6 +78,10 @@
 	&:hover {
 		box-shadow: 0 10px 30px -2px rgba(10, 16, 34, 0.2);
 	}
+
+	@include down(md) {
+		flex-direction: column;
+	}
 }
 
 .seriesMediaWrapper {
@@ -60,6 +89,10 @@
 	flex-basis: 260px;
 	flex-grow: 1;
 	margin-right: 22px;
+
+	@include down(md) {
+		margin: 0;
+	}
 }
 
 .seriesMedia {
@@ -78,14 +111,16 @@
 	color: $color--body;
 	font-size: 22px;
 	line-height: 1.5;
+
+	@include down(md) {
+		font-size: 18px;
+	}
 }
 
 .seriesContent {
 	padding-right: 20px;
-}
 
-.sidebarSticky {
-	position: sticky;
-	top: 160px;
-	margin-top: -523px;
+	@include down(md) {
+		padding: 20px;
+	}
 }
