@@ -1,13 +1,13 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import AppBaseStory from '../../containers/AppBase/stories';
-import Container from '../../components/Container';
-import Grid from '../../components/Grid';
-import PageHeader from '../../components/PageHeader';
-import Section from '../../components/Section';
-import Typography from '../../components/Typography';
-import styles from './styles.module.scss';
-const stories = storiesOf('3. Pages/CountDown', module);
+import React from 'react'
+import { storiesOf } from '@storybook/react'
+import AppBaseStory from '../../containers/AppBase/stories'
+import Container from '../../components/Container'
+import Grid from '../../components/Grid'
+import PageHeader from '../../components/PageHeader'
+import Section from '../../components/Section'
+import Typography from '../../components/Typography'
+import styles from './styles.module.scss'
+const stories = storiesOf('3. Pages/CountDown', module)
 
 class CountDown extends React.Component {
 	state = {
@@ -15,25 +15,25 @@ class CountDown extends React.Component {
 		hours: 0,
 		min: 0,
 		sec: 0,
-	};
+	}
 
 	componentDidMount() {
 		// update counter every second
 		this.interval = setInterval(() => {
-			const date = this.calculateCountdown(this.props.date);
-			date ? this.setState(date) : this.stop();
-		}, 1000);
+			const date = this.calculateCountdown(this.props.date)
+			date ? this.setState(date) : this.stop()
+		}, 1000)
 	}
 
 	componentWillUnmount() {
-		this.stop();
+		this.stop()
 	}
 
 	calculateCountdown = endDate => {
-		let diff = (Date.parse(new Date(endDate)) - Date.parse(new Date())) / 1000;
+		let diff = (Date.parse(new Date(endDate)) - Date.parse(new Date())) / 1000
 
 		// clear countdown when date is reached
-		if (diff <= 0) return false;
+		if (diff <= 0) return false
 
 		const timeLeft = {
 			years: 0,
@@ -42,47 +42,47 @@ class CountDown extends React.Component {
 			min: 0,
 			sec: 0,
 			millisec: 0,
-		};
+		}
 
 		// calculate time difference between now and expected date
 		if (diff >= 365.25 * 86400) {
 			// 365.25 * 24 * 60 * 60
-			timeLeft.years = Math.floor(diff / (365.25 * 86400));
-			diff -= timeLeft.years * 365.25 * 86400;
+			timeLeft.years = Math.floor(diff / (365.25 * 86400))
+			diff -= timeLeft.years * 365.25 * 86400
 		}
 		if (diff >= 86400) {
 			// 24 * 60 * 60
-			timeLeft.days = Math.floor(diff / 86400);
-			diff -= timeLeft.days * 86400;
+			timeLeft.days = Math.floor(diff / 86400)
+			diff -= timeLeft.days * 86400
 		}
 		if (diff >= 3600) {
 			// 60 * 60
-			timeLeft.hours = Math.floor(diff / 3600);
-			diff -= timeLeft.hours * 3600;
+			timeLeft.hours = Math.floor(diff / 3600)
+			diff -= timeLeft.hours * 3600
 		}
 		if (diff >= 60) {
-			timeLeft.min = Math.floor(diff / 60);
-			diff -= timeLeft.min * 60;
+			timeLeft.min = Math.floor(diff / 60)
+			diff -= timeLeft.min * 60
 		}
-		timeLeft.sec = diff;
+		timeLeft.sec = diff
 
-		return timeLeft;
-	};
+		return timeLeft
+	}
 
 	stop = () => {
-		clearInterval(this.interval);
-	};
+		clearInterval(this.interval)
+	}
 
 	addLeadingZeros = value => {
-		value = String(value);
+		value = String(value)
 		while (value.length < 2) {
-			value = '0' + value;
+			value = '0' + value
 		}
-		return value;
-	};
+		return value
+	}
 
 	render() {
-		const countDown = this.state;
+		const countDown = this.state
 
 		return (
 			<AppBaseStory>
@@ -110,7 +110,7 @@ class CountDown extends React.Component {
 							justify="center"
 							alignItems="center"
 							spacing={24}
-							style={{ textAlign: 'center', }}
+							style={{ textAlign: 'center' }}
 						>
 							<Grid
 								item
@@ -166,14 +166,14 @@ class CountDown extends React.Component {
 					</Container>
 				</Section>
 			</AppBaseStory>
-		);
+		)
 	}
 }
 
 CountDown.defaultProps = {
 	date: new Date('2019-10-10'),
-};
+}
 
-stories.add('CountDown', () => <CountDown />);
+stories.add('CountDown', () => <CountDown />)
 
-export default CountDown;
+export default CountDown

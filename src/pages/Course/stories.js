@@ -1,19 +1,19 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { text } from '@storybook/addon-knobs';
-import AppBaseStory from '../../containers/AppBase/stories';
-import Container from '../../components/Container';
-import Media from '../../components/Media';
-import Grid from '../../components/Grid';
-import PageHeader from '../../components/PageHeader';
-import Section from '../../components/Section';
-import Typography from '../../components/Typography';
-import SeriesItem from '../../components/SeriesItem';
-import CourseSidebar from '../../components/CourseSidebar';
-import CourseSidebarInfo from '../../components/CourseSidebarInfo/CourseSidebarInfo';
-import styles from './styles.module.scss';
+import React from 'react'
+import { storiesOf } from '@storybook/react'
+import { text } from '@storybook/addon-knobs'
+import AppBaseStory from '../../containers/AppBase/stories'
+import Container from '../../components/Container'
+import Media from '../../components/Media'
+import Grid from '../../components/Grid'
+import PageHeader from '../../components/PageHeader'
+import Section from '../../components/Section'
+import Typography from '../../components/Typography'
+import SeriesItem from '../../components/SeriesItem'
+import CourseSidebar from '../../components/CourseSidebar'
+import CourseSidebarInfo from '../../components/CourseSidebarInfo/CourseSidebarInfo'
+import styles from './styles.module.scss'
 
-const stories = storiesOf('3. Pages/Course', module);
+const stories = storiesOf('3. Pages/Course', module)
 
 export const Default = () => (
 	<AppBaseStory>
@@ -216,8 +216,8 @@ export const Default = () => (
 			</Container>
 		</Section>
 	</AppBaseStory>
-);
+)
 
-stories.add('Default', Default);
+stories.add('Default', Default)
 
-export default Default;
+export default Default

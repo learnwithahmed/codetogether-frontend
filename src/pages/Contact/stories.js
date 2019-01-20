@@ -1,16 +1,16 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import AppBaseStory from '../../containers/AppBase/stories';
-import Button from '../../components/Button';
-import Container from '../../components/Container';
-import Grid from '../../components/Grid';
-import Input from '../../components/Input';
-import List from '../../components/List';
-import PageHeader from '../../components/PageHeader';
-import Section from '../../components/Section';
-import Typography from '../../components/Typography';
-import styles from './styles.module.scss';
-const stories = storiesOf('3. Pages/Contact', module);
+import React from 'react'
+import { storiesOf } from '@storybook/react'
+import AppBaseStory from '../../containers/AppBase/stories'
+import Button from '../../components/Button'
+import Container from '../../components/Container'
+import Grid from '../../components/Grid'
+import Input from '../../components/Input'
+import List from '../../components/List'
+import PageHeader from '../../components/PageHeader'
+import Section from '../../components/Section'
+import Typography from '../../components/Typography'
+import styles from './styles.module.scss'
+const stories = storiesOf('3. Pages/Contact', module)
 
 export const Default = () => (
 	<AppBaseStory>
@@ -55,25 +55,25 @@ export const Default = () => (
 									action=""
 									role="search"
 									onSubmit={e => {
-										e.preventDefault();
-										console.log('sending..');
+										e.preventDefault()
+										console.log('sending..')
 									}}
-									style={{ overflow: 'hidden', }}
+									style={{ overflow: 'hidden' }}
 								>
 									<Input
 										placeholder="Name"
-										style={{ width: '100%', marginBottom: 20, }}
+										style={{ width: '100%', marginBottom: 20 }}
 									/>
 									<Input
 										placeholder="Name"
-										style={{ width: '100%', marginBottom: 20, }}
+										style={{ width: '100%', marginBottom: 20 }}
 									/>
 									<Input
 										placeholder="How can we help"
 										component={<textarea />}
-										style={{ width: '100%', height: 200, }}
+										style={{ width: '100%', height: 200 }}
 									/>
-									<Button type="submit" color="primary" style={{ marginTop: 20, }}>
+									<Button type="submit" color="primary" style={{ marginTop: 20 }}>
 										Send Message
 									</Button>
 								</form>
@@ -84,8 +84,8 @@ export const Default = () => (
 			</Container>
 		</Section>
 	</AppBaseStory>
-);
+)
 
-stories.add('Default', Default);
+stories.add('Default', Default)
 
-export default Default;
+export default Default

@@ -48,7 +48,7 @@ export const Default = () => (
 							<figure className={styles.reveal__background} />
 							<Typography variant="h3">Grow your competence</Typography>
 							<div className={styles.reveal__copy}>
-								<Typography variant="body3" style={{ fontSize: 16, }}>
+								<Typography variant="body3" style={{ fontSize: 16 }}>
 									CodeTogether is an online platform that offers free online
 									coding classes that gives you the tools and training you need to
 									launch your new career—from the comfort of your own home.
@@ -59,7 +59,7 @@ export const Default = () => (
 				</Grid>
 			</Container>
 		</Section>
-		<Section style={{ padding: 0, }}>
+		<Section style={{ padding: 0 }}>
 			<Container>
 				<Grid container>
 					<Grid item xs={12} md={4} lg={4} xl={4} className={styles.margin40}>
@@ -92,38 +92,38 @@ export const Default = () => (
 		>
 			<Container>
 				<Grid container>
-					<Grid item xs={12} style={{ margin: '40px 0', }}>
+					<Grid item xs={12} style={{ margin: '40px 0' }}>
 						<Typography variant="h3">What We Look For </Typography>
 					</Grid>
 
 					<Grid item xs={12} md={4} lg={4}>
-						<Heart style={{ fontSize: '2.4em', }} />
-						<Typography variant="h4" style={{ marginTop: 15, }}>
+						<Heart style={{ fontSize: '2.4em' }} />
+						<Typography variant="h4" style={{ marginTop: 15 }}>
 							Passion for coding
 						</Typography>
-						<Typography variant="body1" style={{ minHeight: 100, }}>
+						<Typography variant="body1" style={{ minHeight: 100 }}>
 							You've demonstrated your passion by beginning to learn on your own. You
 							have the determination to become a developer whether you get into
 							Codetogether or not.
 						</Typography>
 					</Grid>
 					<Grid item xs={12} md={4} lg={4}>
-						<Mind style={{ fontSize: '2.4em', }} />
-						<Typography variant="h4" style={{ marginTop: 15, }}>
+						<Mind style={{ fontSize: '2.4em' }} />
+						<Typography variant="h4" style={{ marginTop: 15 }}>
 							Growth Mindset
 						</Typography>
-						<Typography variant="body1" style={{ minHeight: 100, }}>
+						<Typography variant="body1" style={{ minHeight: 100 }}>
 							Whatever you've been working on so far, you've strived hard for
 							excellence. You're focused on facilitating growth both personally and
 							for others.
 						</Typography>
 					</Grid>
 					<Grid item xs={12} md={4} lg={4}>
-						<Dislike style={{ fontSize: '2.4em', }} />
-						<Typography variant="h4" style={{ marginTop: 15, }}>
+						<Dislike style={{ fontSize: '2.4em' }} />
+						<Typography variant="h4" style={{ marginTop: 15 }}>
 							"No asshole" rule*
 						</Typography>
-						<Typography variant="body1" style={{ minHeight: 100, }}>
+						<Typography variant="body1" style={{ minHeight: 100 }}>
 							We like to live by a no-asshole policy. We look for students who are
 							considerate, helpful and work well with others.
 						</Typography>

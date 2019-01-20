@@ -1,18 +1,18 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { text } from '@storybook/addon-knobs';
-import AppBaseStory from '../../containers/AppBase/stories';
-import Container from '../../components/Container';
-import Media from '../../components/Media';
-import Grid from '../../components/Grid';
-import PageHeader from '../../components/PageHeader';
-import Section from '../../components/Section';
-import Typography from '../../components/Typography';
-import Card from '../../components/Card';
-import PlayIcon from '../../components/icons/PlayIcon';
-import ArrowRight from '../../components/icons/ArrowRight';
-import styles from './styles.module.scss';
-const stories = storiesOf('3. Pages/VideoCourses', module);
+import React from 'react'
+import { storiesOf } from '@storybook/react'
+import { text } from '@storybook/addon-knobs'
+import AppBaseStory from '../../containers/AppBase/stories'
+import Container from '../../components/Container'
+import Media from '../../components/Media'
+import Grid from '../../components/Grid'
+import PageHeader from '../../components/PageHeader'
+import Section from '../../components/Section'
+import Typography from '../../components/Typography'
+import Card from '../../components/Card'
+import PlayIcon from '../../components/icons/PlayIcon'
+import ArrowRight from '../../components/icons/ArrowRight'
+import styles from './styles.module.scss'
+const stories = storiesOf('3. Pages/VideoCourses', module)
 
 export const Default = () => (
 	<AppBaseStory>
@@ -77,8 +77,8 @@ export const Default = () => (
 			</Container>
 		</Section>
 	</AppBaseStory>
-);
+)
 
-stories.add('Default', Default);
+stories.add('Default', Default)
 
-export default Default;
+export default Default

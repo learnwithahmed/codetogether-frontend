@@ -1,29 +1,29 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import AppBaseStory from '../../containers/AppBase/stories';
-import Container from '../../components/Container';
-import Grid from '../../components/Grid';
-import PageHeader from '../../components/PageHeader';
-import Section from '../../components/Section';
-import Typography from '../../components/Typography';
-import Tabs from '../../components/Tabs';
-import Tab from '../../components/Tab';
-import TabPanel from '../../components/TabPanel';
-import ClipCardBody from '../../components/ClipCardBody';
-import ClipCardLink from '../../components/ClipCardLink';
-import styles from './styles.module.scss';
-const stories = storiesOf('3. Pages/Schedule', module);
+import React from 'react'
+import { storiesOf } from '@storybook/react'
+import AppBaseStory from '../../containers/AppBase/stories'
+import Container from '../../components/Container'
+import Grid from '../../components/Grid'
+import PageHeader from '../../components/PageHeader'
+import Section from '../../components/Section'
+import Typography from '../../components/Typography'
+import Tabs from '../../components/Tabs'
+import Tab from '../../components/Tab'
+import TabPanel from '../../components/TabPanel'
+import ClipCardBody from '../../components/ClipCardBody'
+import ClipCardLink from '../../components/ClipCardLink'
+import styles from './styles.module.scss'
+const stories = storiesOf('3. Pages/Schedule', module)
 
 class Schedule extends React.Component {
 	state = {
 		value: 0,
-	};
+	}
 
 	handleTabPanel = value => {
-		this.setState({ value });
-	};
+		this.setState({ value })
+	}
 	render() {
-		const { value } = this.state;
+		const { value } = this.state
 
 		return (
 			<AppBaseStory>
@@ -97,10 +97,10 @@ class Schedule extends React.Component {
 					</Container>
 				</Section>
 			</AppBaseStory>
-		);
+		)
 	}
 }
 
-stories.add('Default', () => <Schedule />);
+stories.add('Default', () => <Schedule />)
 
-export default Schedule;
+export default Schedule
