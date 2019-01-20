@@ -1,13 +1,18 @@
 @import '../styles/partials/colors.module';
+@import '../../components/styles/partials/mixins.module';
 
 /*  Footer */
 .root {
 	flex-shrink: 0;
-	padding-top: 72px;
-	padding-bottom: 72px;
+	padding: 72px 20px;
 	background-color: $color--dark-background;
 
 	a:not(:hover) {
 		color: $color--link;
+	}
+	@include down(md) {
+		h6 {
+			margin-top: 22px;
+		}
 	}
 }
