@@ -46,7 +46,7 @@ class AppBase extends React.Component {
 					<Toolbar variant="default" disableGutters>
 						<Container>
 							<Grid container alignItems="center">
-								<Grid xs={11} md={2} lg={2}>
+								<Grid item xs={10} md={2} lg={2}>
 									<IconButton>
 										<Logo
 											style={{
@@ -61,6 +61,7 @@ class AppBase extends React.Component {
 										matches ? (
 											<React.Fragment>
 												<Grid
+													item
 													md={8}
 													lg={8}
 													style={{
@@ -76,15 +77,16 @@ class AppBase extends React.Component {
 												</Grid>
 
 												<Grid
+													item
 													md={1}
 													lg={1}
-													style={{ padding: '12px 0 12px 48px' }}
+													style={{ paddingLeft: 48 }}
 												>
 													<Button color="primary">Signup</Button>
 												</Grid>
 											</React.Fragment>
 										) : (
-											<Grid xs={1} md={1} lg={2}>
+											<Grid item xs={1} md={1} lg={2}>
 												<Burger
 													onClick={this.handleIsOpen}
 													close={isOpen}
@@ -96,12 +98,9 @@ class AppBase extends React.Component {
 								<Media query={{ maxWidth: 768 }}>
 									{matches =>
 										matches && isOpen ? (
-											<Grid
-												container
-												alignItems="center"
-												className={styles.mobileContainer}
-											>
+											<div className={styles.mobileContainer}>
 												<Grid
+													item
 													xs={12}
 													sm={12}
 													md={8}
@@ -116,17 +115,17 @@ class AppBase extends React.Component {
 															isMobile: true,
 														}}
 													>
-														<a href="#">About</a>
-														<a href="#">Schedule</a>
-														<a href="#">Team</a>
-														<a href="#">Get in Touch</a>
+														<a href="#about">About</a>
+														<a href="#schedule">Schedule</a>
+														<a href="#team">Team</a>
+														<a href="#contact">Get in Touch</a>
 													</AppBarMenu>
 												</Grid>
 
-												<Grid xs={12} sm={12} md={1} lg={1}>
+												<Grid item xs={12} sm={12} md={1} lg={1}>
 													<Button color="primary">Signup</Button>
 												</Grid>
-											</Grid>
+											</div>
 										) : null
 									}
 								</Media>
