@@ -8,8 +8,13 @@
 }
 
 .item {
+	position: relative;
 	box-sizing: border-box;
+	width: 100%;
+	min-height: 1px;
 	margin: 0;
+	padding-right: 15px;
+	padding-left: 15px;
 }
 
 .spacing-0 {
