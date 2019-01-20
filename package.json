@@ -39,8 +39,11 @@
 		"*.js": [
 			"eslint"
 		],
-		"**/*.+(js|scss)": [
+		"**/*.js": [
 			"prettier --write",
+			"git add"
+		],
+		"**/*.scss": [
 			"stylelint --fix",
 			"git add"
 		]
