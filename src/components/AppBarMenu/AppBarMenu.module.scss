@@ -35,12 +35,12 @@
 			line-height: 1;
 		}
 
-		@include down(sm) {
+		@include down(md) {
 			margin-left: 15px;
 		}
 	}
 
-	@include down(sm) {
+	@include down(md) {
 		display: flex;
 		flex: 1;
 		flex-direction: column;
