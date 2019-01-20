@@ -36,7 +36,11 @@
 		}
 	},
 	"lint-staged": {
-		"src/**/*.scss": [
+		"*.js": [
+			"eslint"
+		],
+		"**/*.+(js|scss)": [
+			"prettier --write",
 			"stylelint --fix",
 			"git add"
 		]
